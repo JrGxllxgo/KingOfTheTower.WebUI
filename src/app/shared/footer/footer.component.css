@@ -1,0 +1,13 @@
+img{
+    height: 30%;
+    width: 30%;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.colaboradores{
+    width: 50%;
+}

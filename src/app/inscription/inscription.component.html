@@ -1,0 +1,46 @@
+<div class="component-body" *ngIf="checkUserLog()">
+  <div class="options d-flex justify-content-center">
+    <nav class="navbar navbar-expand">
+      <div class="container">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{ 'active': selectedOption === 'teamData' }" (click)="selectedOption = 'teamData'">{{ 'inscriptions.teamInfo' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{ 'active': selectedOption === 'userData' }" (click)="selectedOption = 'userData'">{{ 'inscriptions.playersInfo' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{ 'active': selectedOption === 'resumeData' }" (click)="selectedOption = 'resumeData'">{{ 'inscriptions.resumeInfo' | translate }}</a>
+          </li>
+        </ul>
+      </div>
+    </nav>  
+  </div>
+
+  <!-- Differents form with data -->
+  <div class="container">
+    <ng-container [ngSwitch]="selectedOption">
+  
+      <!-- Componente teamData -->
+      <ng-container *ngSwitchCase="'teamData'">
+        <app-team-data></app-team-data>
+      </ng-container>
+  
+      <!-- Componente userData -->
+      <ng-container *ngSwitchCase="'userData'">
+        <app-player-data></app-player-data>
+      </ng-container>
+  
+      <!-- Componente resumeData -->
+      <ng-container *ngSwitchCase="'resumeData'">
+        <app-resume-data></app-resume-data>
+      </ng-container>
+  
+    </ng-container>
+  </div>
+</div>
+
+<!-- Div to show if the user is not logged -->
+<div class="component-body mt-5" *ngIf="!checkUserLog()">
+  <h1>Debes de iniciar sesión</h1>
+</div>

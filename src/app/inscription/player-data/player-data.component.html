@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-md-8">
+      <form (ngSubmit)="savePlayersData()" class="my-form">
+        <h2>{{ 'inscriptions.playersForm.fillData' | translate }}</h2>
+        <div *ngFor="let player of allPlayers; let i = index" class="player-form">
+          <h4>{{ 'inscriptions.playersForm.playerN' | translate }} {{ i + 1 }}</h4>
+          <div class="form-group">
+            <label for="nif{{i}}">{{ 'inscriptions.playersForm.playerNif' | translate }}</label>
+            <input type="text" class="form-control" id="nif{{i}}" [(ngModel)]="player.nif" name="nif{{i}}" required (ngModelChange)="savePlayersData()">
+          </div>
+          <div class="form-group">
+            <label for="playerName{{i}}">{{ 'inscriptions.playersForm.playerName' | translate }}</label>
+            <input type="text" class="form-control" id="playerName{{i}}" [(ngModel)]="player.player_name" name="playerName{{i}}" required (ngModelChange)="savePlayersData()">
+          </div>
+          <div class="form-group">
+            <label for="phone{{i}}">{{ 'inscriptions.playersForm.playerTelf' | translate }}</label>
+            <input type="text" class="form-control" id="phone{{i}}" [(ngModel)]="player.phone" name="phone{{i}}" required (ngModelChange)="savePlayersData()">
+          </div>
+          <div class="form-group">
+            <label for="instagram{{i}}">{{ 'inscriptions.playersForm.playerIg' | translate }}</label>
+           <input type="text" class="form-control" id="instagram{{i}}" [(ngModel)]="player.instagram" name="instagram{{i}}" (ngModelChange)="savePlayersData()">
+         </div>
+         <div class="form-group">
+            <label for="wantPics{{i}}">{{ 'inscriptions.playersForm.playerPics' | translate }}</label>
+           <input type="checkbox" class="form-check-input" id="wantPics{{i}}" [(ngModel)]="player.want_pics" name="wantPics{{i}}" (ngModelChange)="savePlayersData()">
+         </div>
+       </div>
+       <button type="button" class="btn btn-primary" (click)="savePlayersData()">{{ 'inscriptions.playersForm.saveBtn' | translate }}</button>
+      </form>
+    </div>
+</div>

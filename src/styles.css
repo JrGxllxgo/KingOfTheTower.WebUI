@@ -1,0 +1,12 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+body{
+    font-size: 14px;
+    box-sizing: border-box;
+    display: grid;
+    /* margin-top: 4%; */
+}
+
+.component-body{
+    margin-top: 7%;
+}

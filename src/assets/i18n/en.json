@@ -1,0 +1,65 @@
+{
+    "footer": {
+        "offPatterns": "Official Patterns",
+        "mainSponsor": "Main Sponsors",
+        "offSponsors": "Official Sponsors"
+    },
+    "header": {
+        "mediaLink": "Media",
+        "newsLink": "News",
+        "rulesLink": "Rules",
+        "contactLink": "Contact Us",
+        "profile": "Profile",
+        "inscriptionLink": "Inscríbete"
+    },
+    "logModal": {
+        "newUser": "New User",
+        "existUser": "Existing User"
+    },
+    "configUser": {
+        "formHeader": "Profile Configuration",
+        "nameLabelInput": "Name: ",
+        "mailLabelInput": "Email: "
+    },
+    "toolbarDropdown": {
+        "userProfile": "My Profile",
+        "logInLink": "LogIn",
+        "logOut": "LogOut"
+    },
+    "profileConfig": {
+        "noSession": "No account avaible"
+    },
+    "modal": {
+        "loggedTitle": "Log In",
+        "loggedBody": "Logging was correct",
+        "errorLoggedTitle": "Error",
+        "errorLoggedBody": "There's a problem qith db connection, please try later."
+    },
+    "inscriptions":{
+        "teamInfo": "Team information",
+        "playersInfo": "PLayer information",
+        "resumeInfo": "Finish register",
+        "playersForm": {
+            "fillData": "Fill players information",
+            "playerN": "Player ",
+            "playerNif": "N.I.F.",
+            "playerName": "PLayer name",
+            "playerTelf": "Contact phone",
+            "playerIg": "Instagram",
+            "playerPics": "Want pics?",
+            "saveBtn": "Save"
+        },
+        "teamForm": {
+            "teamName": "Team name",
+            "teamCat": "Category",
+            "femCat": "Female",
+            "mascCat": "Male",
+            "teamPay": "Payment made?",
+            "yesPay": "Yes",
+            "noPay": "No"
+        },
+        "resumeData": {
+            "resumeTitle": "Register information"
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "footer": {
+        "offPatterns": "Colaboradores Oficiales",
+        "mainSponsor": "Patrocinador Principal",
+        "offSponsors": "Patrocinadores Oficiales"
+    },
+    "header": {
+        "mediaLink": "Multimedia",
+        "newsLink": "Noticias",
+        "rulesLink": "Reglas",
+        "contactLink": "Contacto",
+        "profile": "Perfil",
+        "inscriptionLink": "Inscríbete"
+    },
+    "logModal": {
+        "newUser": "Nuevo Usuario",
+        "existUser": "Usuario Existente"
+    },
+    "configUser": {
+        "formHeader": "Configuración del Perfil",
+        "nameLabelInput": "Nombre: ",
+        "mailLabelInput": "Correo Electrónico"
+    },
+    "toolbarDropdown": {
+        "userProfile": "Mi perfil",
+        "logInLink": "Iniciar Sesión",
+        "logOut": "Cerrar Sesión"
+    },
+    "profileConfig": {
+        "noSession": "No hay ninguna sesión iniciada"
+    },
+    "modal": {
+        "loggedTitle": "Inicio de sesión",
+        "loggedBody": "Se ha iniciado sesión correctamente",
+        "errorLoggedTitle": "Error",
+        "errorLoggedBody": "Ha ocurrido un error con la conexión a la base de datos, vuelva a intentarlo más tarde"
+    },
+    "inscriptions":{
+        "teamInfo": "Información del equipo",
+        "playersInfo": "Información de los jugadores",
+        "resumeInfo": "Finalizar inscripción",
+        "playersForm": {
+            "fillData": "Rellene los datos de los jugadores",
+            "playerN": "Jugador ",
+            "playerNif": "N.I.F.",
+            "playerName": "Nombre del jugador",
+            "playerTelf": "Teléfono de contacto",
+            "playerIg": "Instagram",
+            "playerPics": "¿Desea fotos?",
+            "saveBtn": "Guardar"
+        },
+        "teamForm": {
+            "teamName": "Nombre del equipo",
+            "teamCat": "Categoría",
+            "femCat": "Femenino",
+            "mascCat": "Masculino",
+            "teamPay": "Pago realizado",
+            "yesPay": "Si",
+            "noPay": "No"
+        },
+        "resumeData": {
+            "resumeTitle": "Resumen de la inscripción"
+        }
+    }
+}
