@@ -1,4 +1,4 @@
-<div class="navbar">
+<div class="navbar d-flex">
     <header class="logo-container mt-3">
       <ul class="nav nav-pills">
         <li class="nav-item text-secondary dropdown">
@@ -12,7 +12,8 @@
           </a>
           <div class="dropdown-menu">
             <a class="dropdown-item" routerLink="configprofile">{{ 'toolbarDropdown.userProfile' | translate }}</a>
-            <a class="dropdown-item">Añadir Partido</a>
+            <a class="dropdown-item" routerLink="media">{{ 'header.mediaLink' | translate }}</a>
+            <a class="dropdown-item" routerLink="dashboard" *ngIf="userRole != 'base_user'">Dashboard</a>
             <a class="dropdown-item" 
               (click)="logSession()"
               >{{ setLogText() | translate}}
@@ -20,11 +21,10 @@
           </div>
         </li>
 
-        <li class="nav-item text-secondary"><a routerLink="media" class="nav-link">{{ 'header.mediaLink' | translate }}</a></li>
-        <li class="nav-item text-secondary"><a routerLink="news" class="nav-link">{{ 'header.newsLink' | translate }}</a></li>
+        <li class="nav-item text-secondary"><a routerLink="competition" class="nav-link">Competición</a></li>
         <li class="nav-item"><a routerLink="welcome" aria-current="page"><img src="../../../assets/images/mainLogo.png"/></a></li>
         <li class="nav-item text-secondary"><a routerLink="inscription" class="nav-link">{{ 'header.inscriptionLink' | translate }}</a></li>
-        <li class="nav-item text-secondary"><a routerLink="contact" class="nav-link">{{ 'header.contactLink' | translate }}</a></li>
+        <li class="nav-item text-secondary"><a routerLink="information" class="nav-link">{{ 'header.infoLink' | translate }}</a></li>
       </ul>
     </header>
 </div>

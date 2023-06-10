@@ -1,0 +1,18 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Bienvenido al registro</h4>
+    <button 
+      type="button"
+      class="close"
+      (click)="dismissModal()"
+    >
+    <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+    <div class="modal-body">
+      <p>Total {{ dataToShow.length }}</p>
+      <div *ngFor="let data of dataToShow; let i = index">
+        <p>{{ data.name }}</p>
+      </div>
+    </div>
+</div>

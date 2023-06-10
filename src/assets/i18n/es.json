@@ -10,7 +10,8 @@
         "rulesLink": "Reglas",
         "contactLink": "Contacto",
         "profile": "Perfil",
-        "inscriptionLink": "Inscríbete"
+        "inscriptionLink": "Inscríbete",
+        "infoLink": "Información"
     },
     "logModal": {
         "newUser": "Nuevo Usuario",
@@ -29,11 +30,15 @@
     "profileConfig": {
         "noSession": "No hay ninguna sesión iniciada"
     },
-    "modal": {
-        "loggedTitle": "Inicio de sesión",
+    "toasts": {
+        "warnTitle": "Atención",
+        "successTitle": "Todo correcto",
+        "errorTitle": "Error",
         "loggedBody": "Se ha iniciado sesión correctamente",
-        "errorLoggedTitle": "Error",
-        "errorLoggedBody": "Ha ocurrido un error con la conexión a la base de datos, vuelva a intentarlo más tarde"
+        "errorLoggedBody": "Ha ocurrido un error con la base de datos, vuelva a intentarlo más tarde",
+        "dataSavedBody": "Los datos se han guardado correctamente.",
+        "emptyDataBody": "Alguno de los campos están vacíos",
+        "correctInsBody": "Inscipción mandada con éxito"
     },
     "inscriptions":{
         "teamInfo": "Información del equipo",
@@ -60,6 +65,17 @@
         },
         "resumeData": {
             "resumeTitle": "Resumen de la inscripción"
+        },
+        "modalSendData": {
+            "teamData": {
+                "errorModalDatosBody": "Por favor comprueba que ha introducido los datos del equipo correctamente",
+                "errorModalDatosTitle": "Error en los datos del equipo"
+            }
         }
+    },
+    "adminDashboard": {
+        "allGroupBtn": "Ver los grupos",
+        "allTeamBtn": "Ver los equipos",
+        "allPlayerBtn": "Ver los jugadores"
     }
 }

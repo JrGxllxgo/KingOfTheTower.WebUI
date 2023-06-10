@@ -10,7 +10,8 @@
         "rulesLink": "Rules",
         "contactLink": "Contact Us",
         "profile": "Profile",
-        "inscriptionLink": "Inscríbete"
+        "inscriptionLink": "Inscription",
+        "infoLink": "Information"
     },
     "logModal": {
         "newUser": "New User",
@@ -29,11 +30,15 @@
     "profileConfig": {
         "noSession": "No account avaible"
     },
-    "modal": {
-        "loggedTitle": "Log In",
-        "loggedBody": "Logging was correct",
-        "errorLoggedTitle": "Error",
-        "errorLoggedBody": "There's a problem qith db connection, please try later."
+    "toasts": {
+        "warnTitle": "Warning!",
+        "successTitle": "All right!",
+        "errorTitle": "Error!",
+        "loggedBody": "Logged successfull",
+        "errorLoggedBody": "There's a DB problem, please try later",
+        "dataSavedBody": "Data saved correctly",
+        "emptyDataBody": "There's data empty",
+        "correctInsBody": "Inscription sent correctly"
     },
     "inscriptions":{
         "teamInfo": "Team information",
@@ -60,6 +65,17 @@
         },
         "resumeData": {
             "resumeTitle": "Register information"
+        },
+        "modalSendData": {
+            "teamData": {
+                "errorModalDatosBody": "Please check all the information of the teams.",
+                "errorModalDatosTitle": "Error on team data"
+            }
         }
+    },
+    "adminDashboard": {
+        "allGroupBtn": "See all groups",
+        "allTeamBtn": "See all teams",
+        "allPlayerBtn": "See all players"
     }
 }

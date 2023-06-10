@@ -1,4 +1,37 @@
-.nav-link.active {
-    font-weight: bold;
-    color: black;
+@media (max-width: 550px) {
+  .container {
+    width: 70% ;
   }
+
+  .options {
+    /* margin-top: 30% !important; */
+    font-size: small !important;
+  }
+
+  .navbar {
+    margin-top: 30% !important;
+  }
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: black;
+}
+
+.navbar {
+  margin-top: 10%;
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2%;
+}
+
+.component-body-inscription{
+  background-image: url('../../assets/images/mainLogo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* margin-top: 6% !important; */
+}

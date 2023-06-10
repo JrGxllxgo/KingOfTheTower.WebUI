@@ -1,3 +1,3 @@
 export interface GroupModel {
-    group_name: string;
+    name: string;
 }

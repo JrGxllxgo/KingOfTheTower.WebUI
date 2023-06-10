@@ -2,11 +2,12 @@ import { TeamModel } from "./teamModel";
 import { UserModel } from "./userModel";
 
 export interface GameModel {
-    team1: TeamModel;
-    team2: TeamModel;
+    id?: number;
+    team1Id: number;
+    team2Id: number;
     score1: number;
     score2: number;
     pitch: number;
     schedule: Date;
-    staff: UserModel;
+    staffId: number;
 }

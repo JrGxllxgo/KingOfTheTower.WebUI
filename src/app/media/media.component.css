@@ -6,3 +6,8 @@
 .edition{
     text-align: center;
 }
+
+img {
+    margin: 2%;
+    max-width: 10% !important;
+}

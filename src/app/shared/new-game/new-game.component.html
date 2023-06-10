@@ -1,0 +1,51 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Bienvenido al registro</h4>
+    <button 
+      type="button"
+      class="close"
+      (click)="dismissModal()"
+    >
+    <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body d-flex justify-content-evenly flex-column">
+    <div class="d-flex justify-content-center">
+        <form class="my-form" (ngSubmit)="createGame()">
+            <div class="form-group">
+              <label for="equipo1">Equipo 1</label>
+              <select class="form-control" id="group">
+                <option *ngFor="let team of teams" [value]="team.name" [(ngModel)]="newGame.team1Id">{{ team.name }} </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="equipo2">Equipo 2</label>
+              <select class="form-control" id="group">
+                <option *ngFor="let team of teams2" [value]="team.name" [(ngModel)]="newGame.team2Id">{{ team.name }} </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="puntosEquipo1">Puntos Equipo 1</label>
+              <input type="number" class="form-control" id="puntosEquipo1" placeholder="Puntos Equipo 1" max="22" min="0" [(ngModel)]="newGame.score1">
+            </div>
+            <div class="form-group">
+              <label for="puntosEquipo2">Puntos Equipo 2</label>
+              <input type="number" class="form-control" id="puntosEquipo2" placeholder="Puntos Equipo 2" max="22" min="0" [(ngModel)]="newGame.score2">
+            </div>
+            <div class="form-group">
+              <label for="pista">Pista</label>
+              <select class="form-control" id="pista" [(ngModel)]="newGame.pitch">
+                <option *ngFor="let pista of courts" [value]="pista">{{ pista }}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="hora">Hora de partido</label>
+              <input type="datetime-local" class="form-control" id="hora" placeholder="Hora de partido" [(ngModel)]="newGame.schedule">
+            </div>
+            <div class="form-group">
+              <label for="encargado">Encargado</label>
+              <input type="text" class="form-control" id="encargado" placeholder="Encargado">
+            </div>
+            <button type="submit" class="btn btn-primary">Crear Partido</button>
+          </form>
+    </div>
+</div>

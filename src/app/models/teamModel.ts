@@ -1,12 +1,12 @@
 import { GroupModel } from "./groupModel";
 
 export interface TeamModel {
-    team_name: string;
+    name: string;
     category: string;
-    payed: boolean;
+    pay: boolean;
     wins: number;
     defeats: number;
     points_diff: number;
     classification_points: number;
-    // group: GroupModel
+    group?: GroupModel
 }

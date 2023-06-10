@@ -1,0 +1,22 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Bienvenido al registro</h4>
+    <button 
+      type="button"
+      class="close"
+      (click)="dismissModal()"
+    >
+    <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body d-flex justify-content-evenly flex-column">
+    <div class="d-flex justify-content-center">
+      <form (ngSubmit)="saveGroup()" #grupoForm="ngForm">
+        <div class="form-group">
+          <label for="nombre">Nombre del Grupo:</label>
+          <input type="text" class="form-control" id="nombre" [(ngModel)]="newGroup.name" name="nombre" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Crear Grupo</button>
+      </form>
+    </div>
+</div>

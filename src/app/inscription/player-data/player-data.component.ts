@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PlayerModel } from 'src/app/models/playerModel';
-import { InscriptionService } from '../inscription.service';
+import { InscriptionService } from '../../services/inscription.service';
 import { TeamModel } from 'src/app/models/teamModel';
 
 @Component({
@@ -29,7 +29,7 @@ export class PlayerDataComponent {
     for(let i = 0; i < 4; i++){
       const newPlayer: PlayerModel = {
         nif: '',
-        player_name: '',
+        name: '',
         phone: '',
         instagram: '',
         want_pics: false,

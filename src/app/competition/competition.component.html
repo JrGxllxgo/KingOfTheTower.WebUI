@@ -1,0 +1,96 @@
+<div class="component-body pb-5 d-flex justify-content-center">
+    <div class="courts d-flex flex-column">
+        <div class="court">
+            <h3>Pista 1</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Equipo local</th>
+                      <th scope="col">Equipo visitante</th>
+                      <th scope="col">Hora</th>
+                      <th scope="col">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let game of games1; let index = index">
+                      <td>{{ game.id }}</td>
+                      <td>{{ game.team1Id }}</td>
+                      <td>{{ game.team2Id }}</td>
+                      <td>{{ game.schedule | date:'shortTime' }}</td>
+                      <td>{{ game.score1 }} - {{ game.score2 }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="court">
+            <h3>Pista 2</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Equipo local</th>
+                      <th scope="col">Equipo visitante</th>
+                      <th scope="col">Hora</th>
+                      <th scope="col">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let game of games2; let index = index">
+                      <td>{{ game.id }}</td>
+                      <td>{{ game.team1Id }}</td>
+                      <td>{{ game.team2Id }}</td>
+                      <td>{{ game.schedule | date:'shortTime' }}</td>
+                      <td>{{ game.score1 }} - {{ game.score2 }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="court">
+            <h3>Pista 3</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Equipo local</th>
+                      <th scope="col">Equipo visitante</th>
+                      <th scope="col">Hora</th>
+                      <th scope="col">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let game of games3; let index = index">
+                      <td>{{ game.id }}</td>
+                      <td>{{ game.team1Id }}</td>
+                      <td>{{ game.team2Id }}</td>
+                      <td>{{ game.schedule | date:'shortTime' }}</td>
+                      <td>{{ game.score1 }} - {{ game.score2 }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="court">
+            <h3>Pista 4</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Equipo local</th>
+                      <th scope="col">Equipo visitante</th>
+                      <th scope="col">Hora</th>
+                      <th scope="col">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let game of games4; let index = index">
+                      <td>{{ game.id }}</td>
+                      <td>{{ game.team1Id }}</td>
+                      <td>{{ game.team2Id }}</td>
+                      <td>{{ game.schedule | date:'shortTime' }}</td>
+                      <td>{{ game.score1 }} - {{ game.score2 }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

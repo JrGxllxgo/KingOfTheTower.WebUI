@@ -6,23 +6,23 @@
           <h4>{{ 'inscriptions.playersForm.playerN' | translate }} {{ i + 1 }}</h4>
           <div class="form-group">
             <label for="nif{{i}}">{{ 'inscriptions.playersForm.playerNif' | translate }}</label>
-            <input type="text" class="form-control" id="nif{{i}}" [(ngModel)]="player.nif" name="nif{{i}}" required (ngModelChange)="savePlayersData()">
+            <input type="text" class="form-control" id="nif{{i}}" [(ngModel)]="player.nif" name="nif{{i}}" required>
           </div>
           <div class="form-group">
             <label for="playerName{{i}}">{{ 'inscriptions.playersForm.playerName' | translate }}</label>
-            <input type="text" class="form-control" id="playerName{{i}}" [(ngModel)]="player.player_name" name="playerName{{i}}" required (ngModelChange)="savePlayersData()">
+            <input type="text" class="form-control" id="playerName{{i}}" [(ngModel)]="player.name" name="playerName{{i}}" required>
           </div>
           <div class="form-group">
             <label for="phone{{i}}">{{ 'inscriptions.playersForm.playerTelf' | translate }}</label>
-            <input type="text" class="form-control" id="phone{{i}}" [(ngModel)]="player.phone" name="phone{{i}}" required (ngModelChange)="savePlayersData()">
+            <input type="text" class="form-control" id="phone{{i}}" [(ngModel)]="player.phone" name="phone{{i}}" required>
           </div>
           <div class="form-group">
             <label for="instagram{{i}}">{{ 'inscriptions.playersForm.playerIg' | translate }}</label>
-           <input type="text" class="form-control" id="instagram{{i}}" [(ngModel)]="player.instagram" name="instagram{{i}}" (ngModelChange)="savePlayersData()">
+           <input type="text" class="form-control" id="instagram{{i}}" [(ngModel)]="player.instagram" name="instagram{{i}}">
          </div>
          <div class="form-group">
             <label for="wantPics{{i}}">{{ 'inscriptions.playersForm.playerPics' | translate }}</label>
-           <input type="checkbox" class="form-check-input" id="wantPics{{i}}" [(ngModel)]="player.want_pics" name="wantPics{{i}}" (ngModelChange)="savePlayersData()">
+           <input type="checkbox" class="form-check-input" id="wantPics{{i}}" [(ngModel)]="player.want_pics" name="wantPics{{i}}">
          </div>
        </div>
        <button type="button" class="btn btn-primary" (click)="savePlayersData()">{{ 'inscriptions.playersForm.saveBtn' | translate }}</button>
