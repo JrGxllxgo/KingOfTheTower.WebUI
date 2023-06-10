@@ -17,4 +17,8 @@ export class DataService {
   public getGames(court: number): Observable <any> {
     return this._http.get(CommonConstants.GAMES_BY_COURT + court)
   }
+
+  public getStaff(): Observable <any>{
+    return this._http.get(CommonConstants.USER_BY_ROLE + 'staff')
+  }
 }

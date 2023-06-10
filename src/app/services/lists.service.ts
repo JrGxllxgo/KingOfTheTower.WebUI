@@ -23,10 +23,14 @@ export class ListsService {
   }
 
   public getTeamsByGroup(groupName: string): Observable <any>{
-    return this._http.get(CommonConstants.TEAMS + groupName);
+    return this._http.get(CommonConstants.TEAMS_BY_GROUP + groupName);
   }
 
   public getPlayers(): Observable <any>{
     return this._http.get(CommonConstants.PLAYERS)
+  }
+
+  public getStaff(): Observable <any>{
+    return this._http.get(CommonConstants.USER_BY_ROLE + 'staff')
   }
 }

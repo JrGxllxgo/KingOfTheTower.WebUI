@@ -28,6 +28,11 @@
   padding: 2%;
 }
 
+.error {
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
 .component-body-inscription{
   background-image: url('../../assets/images/mainLogo.jpg');
   background-repeat: no-repeat;

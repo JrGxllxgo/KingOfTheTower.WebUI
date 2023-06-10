@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { GroupModel } from 'src/app/models/groupModel';
-import { NewGroupService } from './new-group.service';
+import { NewGroupService } from '../../services/new-group.service';
 import { NotifierService } from 'src/app/services/notifier.service';
 
 type Nullable<T> = T | null;
@@ -12,13 +12,11 @@ type Nullable<T> = T | null;
   styleUrls: ['./new-group.component.css']
 })
 export class NewGroupComponent {
-  public newGroup: GroupModel = {
-    name: ''
-  }
-
   @Input()
   modalReference: Nullable<NgbModalRef> = null;
 
+  public newGroup: GroupModel = { name: '' }
+  
   constructor(
     private _newGroupService: NewGroupService,
     private _toastr: NotifierService
@@ -30,8 +28,8 @@ export class NewGroupComponent {
 
   public saveGroup(){
     this._newGroupService.createGroup(this.newGroup)
-    .then(response => this.dismissModal())
-    .then(result => this._toastr.showSuccess('El grupo se ha guardado con éxito', ' Todo correcto'))
-    .catch(error => this._toastr.showError(error, ' Algo no ha ido bien...'));
+      .then(response => this.dismissModal())
+      .then(result => this._toastr.showSuccess('El grupo se ha guardado con éxito', ' Todo correcto'))
+      .catch(error => this._toastr.showError(error, ' Algo no ha ido bien...'));
   }
 }

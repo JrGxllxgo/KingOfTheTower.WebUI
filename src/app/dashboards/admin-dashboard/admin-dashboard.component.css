@@ -1,3 +1,9 @@
+@media (max-width: 550px) {
+    .buttons {
+      padding-top: 30% !important;
+    }
+  }
+
 .teamsContainer {
     margin-top: 50%;
     background-color: azure;
@@ -5,4 +11,14 @@
 
 .buttons {
     padding-top: 7%;
+}
+
+.table {
+    background-color: lightgray;
+    opacity: 0.95;
+    color:white;
+}
+
+.header {
+    color: white;
 }

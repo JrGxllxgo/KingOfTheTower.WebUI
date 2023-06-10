@@ -1,9 +1,10 @@
 import { PlayerModel } from "./playerModel";
 
 export interface UserModel {
-    id: number;
+    id?: number;
     name: string;
     mail: string;
-    role: 'base_user';
+    role: string;
+    playerId?: number,
     Player?: PlayerModel;
 }

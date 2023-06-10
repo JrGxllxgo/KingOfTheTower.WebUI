@@ -6,5 +6,6 @@ export interface PlayerModel {
     phone: string;
     instagram: string;
     want_pics: boolean;
-    team: TeamModel;
+    teamId?: number;
+    team?: TeamModel;
 }

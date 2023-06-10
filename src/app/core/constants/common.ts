@@ -10,8 +10,12 @@ export class CommonConstants {
         environment.baseUrl + 'api/Users/register';
     public static USER_INFORMATION: string =
         environment.baseUrl + 'api/Users/getUserByEmail/';
+    public static USER_BY_ROLE: string =
+        environment.baseUrl + 'api/Users/getUserByRole/'
     public static USERS: string =
-        environment.baseUrl + 'api/Users/getAllUsers'
+        environment.baseUrl + 'api/Users/getAllUsers';
+    public static USER_DELETE: string = 
+        environment.baseUrl + 'api/Users/'
 
     public static TEAM_REGISTER: string =
         environment.baseUrl + 'api/Teams/register';
@@ -28,6 +32,8 @@ export class CommonConstants {
     public static PLAYERS: string = 
         environment.baseUrl + 'api/Players/getAllPlayers';
 
+    public static GAME_REGISTER: string =
+        environment.baseUrl + 'api/Games/register';
     public static GAMES_BY_COURT: string = 
-        environment.baseUrl + 'api/Games/getGameByCourt/'
+        environment.baseUrl + 'api/Games/getGameByCourt/';
 }

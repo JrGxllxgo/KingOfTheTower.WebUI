@@ -33,6 +33,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { NotifierComponent } from './notifier/notifier.component'
 import { CommonConstants } from './core/constants/common';
 import { CompetitionComponent } from './competition/competition.component';
+import { NewStaffModalComponent } from './shared/new-staff-modal/new-staff-modal.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { CompetitionComponent } from './competition/competition.component';
     NewGameComponent,
     NewGroupComponent,
     ListModalComponent,
-    CompetitionComponent
+    CompetitionComponent,
+    NewStaffModalComponent
   ],
   imports: [
     BrowserModule,

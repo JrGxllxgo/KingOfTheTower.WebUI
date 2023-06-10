@@ -8,5 +8,41 @@
             <button type="button" class="btn btn-warning m-2" (click)="openAllTeamModal()"><i class="bi bi-search"></i>{{ 'adminDashboard.allTeamBtn' | translate }}</button>
             <button type="button" class="btn btn-warning m-2" (click)="openAllPlayersModal()"><i class="bi bi-search"></i>{{ 'adminDashboard.allPlayerBtn' | translate }}</button>
         </div>
+        <div class="staff">
+            <div class="staff-header d-flex flex-row ">
+                <div class="header">
+                    <h1>Staff Members</h1>
+                </div>
+                <div class="staff-buttons ms-auto p-2">
+                    <button type="button" class="btn btn-success me-2" (click)="openNewStaffModal()">
+                        <i class="bi bi-database-fill-add"></i>
+                    </button>
+                    <button type="button" class="btn btn-info" (click)="getStaffList()">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </button>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Correo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let staff of staffMembers; let index">
+                        <td> {{ staff.id }}</td>
+                        <td> {{ staff.name }}</td>
+                        <td> {{ staff.mail }}</td>
+                        <td>
+                            <button type="button" class="btn btn-danger mw-10" (click)="deleteStaff( staff.mail )">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
