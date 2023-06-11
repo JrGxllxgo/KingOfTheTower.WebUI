@@ -11,7 +11,7 @@ export class CommonConstants {
     public static USER_INFORMATION: string =
         environment.baseUrl + 'api/Users/getUserByEmail/';
     public static USER_BY_ROLE: string =
-        environment.baseUrl + 'api/Users/getUserByRole/'
+        environment.baseUrl + 'api/Users/getUserByRole/';
     public static USERS: string =
         environment.baseUrl + 'api/Users/getAllUsers';
     public static USER_DELETE: string = 
@@ -36,4 +36,6 @@ export class CommonConstants {
         environment.baseUrl + 'api/Games/register';
     public static GAMES_BY_COURT: string = 
         environment.baseUrl + 'api/Games/getGameByCourt/';
+    public static GAMES_BY_STAFF: string = 
+        environment.baseUrl + 'api/Games/getGameByStaff/';
 }

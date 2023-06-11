@@ -5,7 +5,6 @@ import { GameModel } from 'src/app/models/gameModel';
 import { GroupModel } from 'src/app/models/groupModel';
 import { TeamModel } from 'src/app/models/teamModel';
 import { UserModel } from 'src/app/models/userModel';
-import { DataService } from 'src/app/services/data.service';
 import { ListsService } from 'src/app/services/lists.service';
 import { NewGameService } from 'src/app/services/new-game.service';
 import { NotifierService } from 'src/app/services/notifier.service';

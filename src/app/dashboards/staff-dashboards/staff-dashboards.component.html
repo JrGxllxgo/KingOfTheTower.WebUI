@@ -1,0 +1,29 @@
+<div class="component-body h-100 d-flex justify-content-center">
+    <div class="buttons d-flex flex-column">    
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Equipo1</th>
+                        <th scope="col">Equipo2</th>
+                        <th scope="col">Pista</th>
+                        <th scope="col">Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let game of staffGames; let index">
+                        <td>{{ game.id }}</td>
+                        <td>{{ game.team1Id }}</td>
+                        <td>{{ game.team2Id }}</td>
+                        <td>{{ game.court }}</td>
+                        <td>{{ game.schedule | date:'shortTime' }}</td>
+                        <td>
+                            <button type="button" class="btn btn-success mw-10" (click)="openResultGameModal(game)">
+                                <i class="bi bi-pencil-fill"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</div>

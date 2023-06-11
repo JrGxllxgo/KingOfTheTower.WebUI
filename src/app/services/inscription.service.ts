@@ -32,8 +32,8 @@ export class InscriptionService {
     return this.playersData;
   }
 
-  public sendInscription(){
-    // console.log(this.playersData);
+  public createPlayers(players: PlayerModel[], teamId: number){
+    console.log(players);
   }
 
   public createNewTeam(newTeam: TeamModel){
@@ -47,6 +47,5 @@ export class InscriptionService {
       body: JSON.stringify(newTeam),
       redirect: 'follow'
     });
-    // return this.http.post(CommonConstants.TEAM_REGISTER, JSON.stringify(newTeam));
   }
 }

@@ -1,4 +1,9 @@
 {
+    "welcome": {
+        "winners": "These are our lasts male winners!!!",
+        "newSponsor": "A big new sponsor has reached at our MD...",
+        "nextEdition": "A new edition is coming...?"
+    },
     "footer": {
         "offPatterns": "Official Patterns",
         "mainSponsor": "Main Sponsors",
@@ -11,7 +16,10 @@
         "contactLink": "Contact Us",
         "profile": "Profile",
         "inscriptionLink": "Inscription",
-        "infoLink": "Information"
+        "adminDashboardLink": "Dashboard",
+        "staffGamesLink": "My Games",
+        "competitionLink": "Competition",
+        "infoLink": "Información"
     },
     "logModal": {
         "newUser": "New User",

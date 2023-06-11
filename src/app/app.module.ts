@@ -34,6 +34,8 @@ import { NotifierComponent } from './notifier/notifier.component'
 import { CommonConstants } from './core/constants/common';
 import { CompetitionComponent } from './competition/competition.component';
 import { NewStaffModalComponent } from './shared/new-staff-modal/new-staff-modal.component';
+import { StaffDashboardsComponent } from './dashboards/staff-dashboards/staff-dashboards.component';
+import { ModGameModalComponent } from './shared/mod-game-modal/mod-game-modal.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { NewStaffModalComponent } from './shared/new-staff-modal/new-staff-modal
     NewGroupComponent,
     ListModalComponent,
     CompetitionComponent,
-    NewStaffModalComponent
+    NewStaffModalComponent,
+    StaffDashboardsComponent,
+    ModGameModalComponent
   ],
   imports: [
     BrowserModule,

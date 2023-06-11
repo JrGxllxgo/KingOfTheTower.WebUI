@@ -21,4 +21,8 @@ export class DataService {
   public getStaff(): Observable <any>{
     return this._http.get(CommonConstants.USER_BY_ROLE + 'staff')
   }
+
+  public getGamesStaff(staffId: number): Observable <any> {
+    return this._http.get(CommonConstants.GAMES_BY_STAFF + staffId);
+  }
 }

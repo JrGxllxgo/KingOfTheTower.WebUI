@@ -8,6 +8,7 @@ import { ProfileConfigComponent } from './profile-config/profile-config.componen
 import { InscriptionComponent } from './inscription/inscription.component';
 import { AdminDashboardComponent } from './dashboards/admin-dashboard/admin-dashboard.component';
 import { CompetitionComponent } from './competition/competition.component';
+import { StaffDashboardsComponent } from './dashboards/staff-dashboards/staff-dashboards.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: AdminDashboardComponent
+  },
+  {
+    path: 'staff',
+    component: StaffDashboardsComponent
   },
   {
     path: 'competition',

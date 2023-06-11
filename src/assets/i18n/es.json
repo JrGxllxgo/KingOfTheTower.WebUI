@@ -1,4 +1,9 @@
 {
+    "welcome": {
+        "winners": "¡Estos son nuestros últimos ganadores masculinos!",
+        "newSponsor": "Un nuevo gran patrocinador ha llegado a nuestro buzón...",
+        "nextEdition": "¿Se aproxima la siguiente edición?"
+    },
     "footer": {
         "offPatterns": "Colaboradores Oficiales",
         "mainSponsor": "Patrocinador Principal",
@@ -11,6 +16,9 @@
         "contactLink": "Contacto",
         "profile": "Perfil",
         "inscriptionLink": "Inscríbete",
+        "adminDashboardLink": "Dashboard",
+        "staffGamesLink": "Mis partidos",
+        "competitionLink": "Competición",
         "infoLink": "Información"
     },
     "logModal": {

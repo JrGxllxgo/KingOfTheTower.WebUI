@@ -10,12 +10,12 @@ import { TeamModel } from 'src/app/models/teamModel';
 })
 export class PlayerDataComponent {
   public allPlayers: PlayerModel[] = []
-  public teamSigned: TeamModel;
+  public teamSigned: string = '';
 
   constructor(
     private _inscriptionService: InscriptionService
   ){
-    this.teamSigned = this._inscriptionService.getTeamDataForm();
+    this.teamSigned = this._inscriptionService.getTeamDataForm().name;
     this.initializeForm();
   }
 

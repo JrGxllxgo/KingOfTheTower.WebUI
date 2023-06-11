@@ -1,0 +1,24 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Bienvenido al registro</h4>
+    <button 
+        type="button"
+        class="close"
+        (click)="dismissModal()"
+    >
+    <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <form>
+        <div class="form-group">
+          <label for="puntosLocal">Puntos Equipo {{staffGame.team1Id}}</label>
+          <input type="number" class="form-control" id="puntosLocal" [(ngModel)]="staffGame.score1" name="score1" max="22" min="0" required>
+        </div>
+        <div class="form-group">
+          <label for="puntosVisitante">Puntos Equipo {{staffGame.team2Id}}</label>
+          <input type="number" class="form-control" id="puntosVisitante" [(ngModel)]="staffGame.score2" name="score2" max="22" min="0"required>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="updateGame()">Enviar</button>
+      </form> 
+</div>
+

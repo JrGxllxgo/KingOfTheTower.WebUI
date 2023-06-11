@@ -12,6 +12,7 @@ import { NotifierService } from 'src/app/services/notifier.service';
 export class ResumeDataComponent {
   public resumeTeamData: TeamModel;
   public allPlayers: PlayerModel[];
+  public teamCreated: any;
 
   constructor(
     private _inscriptionService: InscriptionService,
@@ -21,10 +22,16 @@ export class ResumeDataComponent {
     this.allPlayers = this._inscriptionService.getPlayersData();
   }
 
-  public submitForm(){
-      this._inscriptionService.createNewTeam(this.resumeTeamData)
-        .then(response => response.text())
-        .then(result => this._toastr.showSuccess('Inscripción mandada con éxito', ' Todo correcto'))
+  public async submitForm(){
+      await this._inscriptionService.createNewTeam(this.resumeTeamData)
+        .then(response => {
+          this.teamCreated = response.json();
+          // console.log(response.json())
+        })
+        .then(result => {
+          this._toastr.showSuccess('Inscripción mandada con éxito', ' Todo correcto')})
         .catch(error => this._toastr.showError(error, ' Algo no ha ido bien...'));
+      console.log(this.teamCreated)
+      this._inscriptionService.createPlayers(this.allPlayers, this.teamCreated.id);
   }
 }
