@@ -85,5 +85,18 @@
         "allGroupBtn": "See all groups",
         "allTeamBtn": "See all teams",
         "allPlayerBtn": "See all players"
+    },
+    "updateResultModal": {
+        "updateTitle": "Add game result",
+        "pointsTeam": "Points team:",
+        "sendButton": "Update result"
+    },
+    "groupClassTable": {
+        "groupTitle": "Group ",
+        "teamTitle": "Team",
+        "winsTitle": "Wins",
+        "defeatsTitle": "Defeats",
+        "pdiffTitle": "+/-",
+        "cpointsTitle": "Points"
     }
 }

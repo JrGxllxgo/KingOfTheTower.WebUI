@@ -26,8 +26,27 @@ export class NewGameComponent {
   public groupSelected: string = '';
   public showGameForm: boolean = false;
   public newGame: GameModel  ={
+    id: 0,
     team1Id: 0,
+    team1: {
+      name: '',
+      category: '',
+      pay: false,
+      wins: 0,
+      defeats: 0,
+      points_diff: 0,
+      classification_points: 0
+    },
     team2Id: 0,
+    team2: {
+      name: '',
+      category: '',
+      pay: false,
+      wins: 0,
+      defeats: 0,
+      points_diff: 0,
+      classification_points: 0
+    },
     score1: 0,
     score2: 0,
     court: 1,
@@ -78,7 +97,17 @@ export class NewGameComponent {
     }else{      
       console.log(this.newGame)
       this._gameService.createGame(this.newGame)
-      .then(response => this.dismissModal())
+      .then(async response => {
+        if (response.ok){
+          let result = await response.json();
+          this.dismissModal();
+        } else if (response.status == 500){          
+          let errorMessage = await response.text();
+          this._toastr.showError(errorMessage, ' Algo no ha ido bien...')
+        } else {
+          console.log(response.status);
+        }
+      })
       .then(result => this._toastr.showSuccess('El partido se ha guardado con éxito', ' Todo correcto'))
       .catch(error => this._toastr.showError(error, ' Algo no ha ido bien...'));
     }

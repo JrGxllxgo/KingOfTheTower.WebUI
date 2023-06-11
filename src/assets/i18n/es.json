@@ -22,8 +22,7 @@
         "infoLink": "Información"
     },
     "logModal": {
-        "newUser": "Nuevo Usuario",
-        "existUser": "Usuario Existente"
+        "newUser": "Iniciar sesión"
     },
     "configUser": {
         "formHeader": "Configuración del Perfil",
@@ -85,5 +84,18 @@
         "allGroupBtn": "Ver los grupos",
         "allTeamBtn": "Ver los equipos",
         "allPlayerBtn": "Ver los jugadores"
+    },
+    "updateResultModal": {
+        "updateTitle": "Añadir resultado de partido",
+        "pointsTeam": "Puntos equipo: ",
+        "sendButton": "Actualizar resultado"
+    },    
+    "groupClassTable": {
+        "groupTitle": "Grupo ",
+        "teamTitle": "Equipo",
+        "winsTitle": "Victorias",
+        "defeatsTitle": "Derrotas",
+        "pdiffTitle": "+/-",
+        "cpointsTitle": "Puntos"
     }
 }

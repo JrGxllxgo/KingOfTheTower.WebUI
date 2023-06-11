@@ -2,6 +2,10 @@
     .courts {
       padding-top: 30% !important;
     }
+
+    .component-body {
+      flex-direction: column !important;
+    }
   }
 
 .component-body {

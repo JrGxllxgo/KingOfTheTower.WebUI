@@ -13,8 +13,8 @@
                 <tbody>
                     <tr *ngFor="let game of staffGames; let index">
                         <td>{{ game.id }}</td>
-                        <td>{{ game.team1Id }}</td>
-                        <td>{{ game.team2Id }}</td>
+                        <td>{{ game.team1.name }}</td>
+                        <td>{{ game.team2.name }}</td>
                         <td>{{ game.court }}</td>
                         <td>{{ game.schedule | date:'shortTime' }}</td>
                         <td>

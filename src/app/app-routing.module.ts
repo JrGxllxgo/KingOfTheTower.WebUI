@@ -39,12 +39,12 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    canActivate: [AdminGuard],
+    // canActivate: [AdminGuard],
     component: AdminDashboardComponent
   },
   {
     path: 'staff',
-    canActivate: [AdminGuard],
+    // canActivate: [AdminGuard],
     component: StaffDashboardsComponent
   },
   {

@@ -15,8 +15,8 @@
                 <tbody>
                     <tr *ngFor="let game of games1; let index = index">
                       <td>{{ game.id }}</td>
-                      <td>{{ game.team1Id }}</td>
-                      <td>{{ game.team2Id }}</td>
+                      <td>{{ game.team1.name }}</td>
+                      <td>{{ game.team2.name }}</td>
                       <td>{{ game.schedule | date:'shortTime' }}</td>
                       <td>{{ game.score1 }} - {{ game.score2 }}</td>
                     </tr>
@@ -38,8 +38,8 @@
                 <tbody>
                     <tr *ngFor="let game of games2; let index = index">
                       <td>{{ game.id }}</td>
-                      <td>{{ game.team1Id }}</td>
-                      <td>{{ game.team2Id }}</td>
+                      <td>{{ game.team1.name }}</td>
+                      <td>{{ game.team2.name }}</td>
                       <td>{{ game.schedule | date:'shortTime' }}</td>
                       <td>{{ game.score1 }} - {{ game.score2 }}</td>
                     </tr>
@@ -61,8 +61,8 @@
                 <tbody>
                     <tr *ngFor="let game of games3; let index = index">
                       <td>{{ game.id }}</td>
-                      <td>{{ game.team1Id }}</td>
-                      <td>{{ game.team2Id }}</td>
+                      <td>{{ game.team1.name }}</td>
+                      <td>{{ game.team2.name }}</td>
                       <td>{{ game.schedule | date:'shortTime' }}</td>
                       <td>{{ game.score1 }} - {{ game.score2 }}</td>
                     </tr>
@@ -84,10 +84,129 @@
                 <tbody>
                     <tr *ngFor="let game of games4; let index = index">
                       <td>{{ game.id }}</td>
-                      <td>{{ game.team1Id }}</td>
-                      <td>{{ game.team2Id }}</td>
+                      <td>{{ game.team1.name }}</td>
+                      <td>{{ game.team2.name }}</td>
                       <td>{{ game.schedule | date:'shortTime' }}</td>
                       <td>{{ game.score1 }} - {{ game.score2 }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="classification ps-3">
+        <div class="court">
+            <h3>{{ "groupClassTable.groupTitle" | translate}} Masculino A</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">{{ "groupClassTable.teamTitle" | translate}}</th>
+                      <th scope="col">{{ "groupClassTable.winsTitle" | translate}}</th>
+                      <th scope="col">{{ "groupClassTable.defeatsTitle" | translate}}</th>
+                      <th scope="col">{{ "groupClassTable.pdiffTitle" | translate}}</th>
+                      <th scope="col">{{ "groupClassTable.cpointsTitle" | translate}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let team of classMA; let index = index">
+                      <td>{{ index }}</td>
+                      <td>{{ team.name }}</td>
+                      <td>{{ team.wins }}</td>
+                      <td>{{ team.defeats }}</td>
+                      <td>{{ team.points_diff }}</td>
+                      <td>{{ team.classification_points }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Grupo Masculino B</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Equipo</th>
+                      <th scope="col">Victorias</th>
+                      <th scope="col">Derrotas</th>
+                      <th scope="col">+/-</th>
+                      <th scope="col">Puntos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let team of classMB; let index = index">
+                      <td>{{ index }}</td>
+                      <td>{{ team.name }}</td>
+                      <td>{{ team.wins }}</td>
+                      <td>{{ team.defeats }}</td>
+                      <td>{{ team.points_diff }}</td>
+                      <td>{{ team.classification_points }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Grupo Masculino C</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Equipo</th>
+                      <th scope="col">Victorias</th>
+                      <th scope="col">Derrotas</th>
+                      <th scope="col">+/-</th>
+                      <th scope="col">Puntos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let team of classMC; let index = index">
+                      <td>{{ index }}</td>
+                      <td>{{ team.name }}</td>
+                      <td>{{ team.wins }}</td>
+                      <td>{{ team.defeats }}</td>
+                      <td>{{ team.points_diff }}</td>
+                      <td>{{ team.classification_points }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Grupo Femnino A</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Equipo</th>
+                      <th scope="col">Victorias</th>
+                      <th scope="col">Derrotas</th>
+                      <th scope="col">+/-</th>
+                      <th scope="col">Puntos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let team of classFA; let index = index">
+                      <td>{{ index }}</td>
+                      <td>{{ team.name }}</td>
+                      <td>{{ team.wins }}</td>
+                      <td>{{ team.defeats }}</td>
+                      <td>{{ team.points_diff }}</td>
+                      <td>{{ team.classification_points }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Grupo Femenino B</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Equipo</th>
+                      <th scope="col">Victorias</th>
+                      <th scope="col">Derrotas</th>
+                      <th scope="col">+/-</th>
+                      <th scope="col">Puntos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let team of classFB; let index = index">
+                      <td>{{ index }}</td>
+                      <td>{{ team.name }}</td>
+                      <td>{{ team.wins }}</td>
+                      <td>{{ team.defeats }}</td>
+                      <td>{{ team.points_diff }}</td>
+                      <td>{{ team.classification_points }}</td>
                     </tr>
                 </tbody>
             </table>

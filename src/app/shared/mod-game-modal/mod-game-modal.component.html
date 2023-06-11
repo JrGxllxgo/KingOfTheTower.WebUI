@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Bienvenido al registro</h4>
+    <h4 class="modal-title" id="modal-basic-title">{{ 'updateResultModal.updateTitle' | translate }}</h4>
     <button 
         type="button"
         class="close"
@@ -11,14 +11,14 @@
 <div class="modal-body">
     <form>
         <div class="form-group">
-          <label for="puntosLocal">Puntos Equipo {{staffGame.team1Id}}</label>
+          <label for="puntosLocal">{{ 'updateResultModal.pointsTeam' | translate }} {{staffGame.team1Id}}</label>
           <input type="number" class="form-control" id="puntosLocal" [(ngModel)]="staffGame.score1" name="score1" max="22" min="0" required>
         </div>
         <div class="form-group">
-          <label for="puntosVisitante">Puntos Equipo {{staffGame.team2Id}}</label>
+          <label for="puntosVisitante">{{ 'updateResultModal.pointsTeam' | translate }} {{staffGame.team2Id}}</label>
           <input type="number" class="form-control" id="puntosVisitante" [(ngModel)]="staffGame.score2" name="score2" max="22" min="0"required>
         </div>
-        <button type="submit" class="btn btn-primary" (click)="updateGame()">Enviar</button>
+        <button type="submit" class="btn btn-primary" (click)="updateGame()">{{ 'updateResultModal.sendButton' | translate }}</button>
       </form> 
 </div>
 

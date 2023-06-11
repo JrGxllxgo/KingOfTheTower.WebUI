@@ -21,7 +21,7 @@ export class TeamDataComponent {
     points_diff: 0,
     classification_points: 0,
     group: {
-      name: 'A Masculino'
+      name: 'MasculinoA'
     }
   };
 

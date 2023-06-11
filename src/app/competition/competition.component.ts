@@ -4,6 +4,8 @@ import { NotifierService } from '../services/notifier.service';
 import { GameModel } from '../models/gameModel';
 import { GroupModel } from '../models/groupModel';
 import { CommonConstants } from '../core/constants/common';
+import { TeamModel } from '../models/teamModel';
+import { ListsService } from '../services/lists.service';
 
 @Component({
   selector: 'app-competition',
@@ -16,8 +18,15 @@ export class CompetitionComponent {
   public games3: GameModel[] = [];
   public games4: GameModel[] = [];
 
+  public classMA: TeamModel[] = [];
+  public classMB: TeamModel[] = [];
+  public classMC: TeamModel[] = [];
+  public classFA: TeamModel[] = [];
+  public classFB: TeamModel[] = [];
+
   constructor( 
     private _dataService: DataService,
+    private _listService: ListsService,
     private _toastr: NotifierService 
   ) {}
 
@@ -25,6 +34,12 @@ export class CompetitionComponent {
     for(let i = 1; i <= CommonConstants.COURTS.length; i++){
       this.getGames(i);
     }
+
+    this.getClass('MasculinoA');
+    this.getClass('MasculinoB');
+    this.getClass('MasculinoC');
+    this.getClass('FemeninoA');
+    this.getClass('FemeninoB');
   }
 
   private getGames(court: number){
@@ -49,5 +64,29 @@ export class CompetitionComponent {
         this._toastr.showError(error, 'Algo no ha salido bien...')
       }
       )
+  }
+
+  private getClass(groupName: string)  {
+    this._listService.getClass(groupName).subscribe(
+      (data: any) => {
+        switch (groupName){
+          case 'MasculinoA':
+            this.classMA = data
+            break;
+          case 'MasculinoB':
+            this.classMB = data
+            break;
+          case 'MasculinoC':
+            this.classMC = data
+            break;
+          case 'FemeninoA':
+            this.classFA = data
+            break;
+          case 'FemeninoB':
+            this.classFB = data
+            break;
+          }
+      }
+    )
   }
 }
