@@ -1,7 +1,7 @@
 <div class="component-body h-100 d-flex justify-content-center">
     <div class="buttons d-flex flex-column">
-        <button type="button" class="btn btn-warning m-2" (click)="openGroupModal()"><i class="bi bi-database-add"></i> Crear nuevo grupo</button>
-        <button type="button" class="btn btn-warning m-2" (click)="openGameModal()"><i class="bi bi-database-add"></i> Añadir partido</button>
+        <button type="button" class="btn btn-warning m-2" (click)="openGroupModal()"><i class="bi bi-database-add"></i>{{ 'adminDashboard.newGroupButton' | translate }}</button>
+        <button type="button" class="btn btn-warning m-2" (click)="openGameModal()"><i class="bi bi-database-add"></i>{{ 'adminDashboard.newGameButton' | translate }}</button>
         <div class="see-data">
             <button type="button" class="btn btn-warning m-2" (click)="openAllGroupModal()"><i class="bi bi-search"></i>{{ 'adminDashboard.allGroupBtn' | translate }}</button>
             <button type="button" class="btn btn-warning m-2" (click)="openAllTeamModal()"><i class="bi bi-search"></i>{{ 'adminDashboard.allTeamBtn' | translate }}</button>
@@ -10,7 +10,7 @@
         <div class="staff">
             <div class="staff-header d-flex flex-row ">
                 <div class="header">
-                    <h1>Staff Members</h1>
+                    <h1>{{ 'adminDashboard.staffHeader' | translate }}</h1>
                 </div>
                 <div class="staff-buttons ms-auto p-2">
                     <button type="button" class="btn btn-success me-2" (click)="openNewStaffModal()">
@@ -25,8 +25,8 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Correo</th>
+                        <th scope="col">{{ 'adminDashboard.staffName' | translate }}</th>
+                        <th scope="col">{{ 'adminDashboard.staffMail' | translate }}</th>
                     </tr>
                 </thead>
                 <tbody>

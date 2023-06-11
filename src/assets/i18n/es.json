@@ -48,6 +48,7 @@
         "correctInsBody": "Inscipción mandada con éxito"
     },
     "inscriptions":{
+        "logFirst": "Debes de iniciar sesión para poder hacer una inscripción",
         "teamInfo": "Información del equipo",
         "playersInfo": "Información de los jugadores",
         "resumeInfo": "Finalizar inscripción",
@@ -83,7 +84,14 @@
     "adminDashboard": {
         "allGroupBtn": "Ver los grupos",
         "allTeamBtn": "Ver los equipos",
-        "allPlayerBtn": "Ver los jugadores"
+        "allPlayerBtn": "Ver los jugadores",
+        "newGroupButton": "Crear nuevo grupo",
+        "newGameButton": "Añadir partido",
+        "staffHeader": "Miembros del staff",
+        "staffName": "Nombre",
+        "staffMail": "Correo",
+        "dataModelTitle": "Información",
+        "totalLabel": "Total "
     },
     "updateResultModal": {
         "updateTitle": "Añadir resultado de partido",
@@ -97,5 +105,39 @@
         "defeatsTitle": "Derrotas",
         "pdiffTitle": "+/-",
         "cpointsTitle": "Puntos"
+    },
+    "courtGamesTable": {
+        "courtName": "Pista ",
+        "localTeam": "Local",
+        "visitTeam": "Visitante",
+        "schedule": "Horario",
+        "resultGame": "Resultado"
+    },
+    "media": {
+        "summer22": "Verano 2022",
+        "feb223": "Febrero 2023"
+    },
+    "newGameModal": {
+        "modalTitle": "Añade el partido",
+        "groupSearch": "Selecciona el grupo del partido",
+        "team1Input": "Equipo local",
+        "team2Input": "Equipo visitante",
+        "team1Score": "Puntos equipo local",
+        "team2Score": "Puntos equipo visitante",
+        "court": "Pista",
+        "schedule": "Hora del partido",
+        "staffInput": "Encargado",
+        "createButton": "Crear partido"
+    },
+    "newGroupModal": {
+        "modalTitle": "Añade el grupo",
+        "groupName": "Nombre del equipo",
+        "sendGroup": "Crear grupo"
+    },
+    "newStaffModal": {
+        "modalTitle": "Añade el voluntario",
+        "nameInput": "Nombre del voluntario",
+        "mailInput": "Correo del voluntario",
+        "createButton": "Crear voluntario"
     }
 }

@@ -1,6 +1,6 @@
 <div class="modal-content">
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Bienvenido al registro</h4>
+    <h4 class="modal-title" id="modal-basic-title">{{ 'adminDashboard.dataModelTitle' | translate }}</h4>
     <button 
       type="button"
       class="close"
@@ -10,7 +10,7 @@
     </button>
   </div>
     <div class="modal-body">
-      <p>Total {{ dataToShow.length }}</p>
+      <p>{{ 'adminDashboard.totalLabel' | translate }} {{ dataToShow.length }}</p>
       <div *ngFor="let data of dataToShow; let i = index">
         <p>{{ data.name }}</p>
       </div>

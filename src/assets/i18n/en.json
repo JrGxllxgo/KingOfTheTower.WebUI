@@ -49,6 +49,7 @@
         "correctInsBody": "Inscription sent correctly"
     },
     "inscriptions":{
+        "logFirst": "You should be logged",
         "teamInfo": "Team information",
         "playersInfo": "PLayer information",
         "resumeInfo": "Finish register",
@@ -84,7 +85,14 @@
     "adminDashboard": {
         "allGroupBtn": "See all groups",
         "allTeamBtn": "See all teams",
-        "allPlayerBtn": "See all players"
+        "allPlayerBtn": "See all players",
+        "newGroupButton": "New Group",
+        "newGameButton": "Add game",
+        "staffHeader": "Staff Members",
+        "staffName": "Name",
+        "staffMail": "Mail",
+        "dataModelTitle": "Data",
+        "totalLabel": "Total "
     },
     "updateResultModal": {
         "updateTitle": "Add game result",
@@ -98,5 +106,39 @@
         "defeatsTitle": "Defeats",
         "pdiffTitle": "+/-",
         "cpointsTitle": "Points"
+    },
+    "courtGamesTable": {
+        "courtName": "Court ",
+        "localTeam": "Local team",
+        "visitTeam": "Visit team",
+        "schedule": "Schedule",
+        "resultGame": "Result"
+    },
+    "media": {
+        "summer22": "Summer 2022",
+        "feb223": "February 2023"
+    },
+    "newGameModal": {
+        "modalTitle": "Add the game",
+        "groupSearch": "Select group",
+        "team1Input": "Local team",
+        "team2Input": "Visit team",
+        "team1Score": "Local team points",
+        "team2Score": "Visit team points",
+        "court": "Court",
+        "schedule": "Game schedule",
+        "staffInput": "Staff",
+        "createButton": "Create game"
+    },
+    "newGroupModal": {
+        "modalTitle": "Add new group",
+        "groupName": "Group name",
+        "sendGroup": "Create group"
+    },
+    "newStaffModal": {
+        "modalTitle": "Add staff",
+        "nameInput": "Staff name",
+        "mailInput": "Staff mail",
+        "createButton": "Create staff"
     }
 }

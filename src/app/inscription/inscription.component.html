@@ -44,6 +44,6 @@
 <!-- Div to show if the user is not logged -->
 <div class="component-body error d-flex align-items-center justify-content-center" *ngIf="!checkUserLog()">
   <div class="alert alert-danger" role="alert">
-    Debes de iniciar sesión para poder hacer una inscripción
+    {{ 'inscriptions.logFirst' | translate }}
   </div>
 </div>

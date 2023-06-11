@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Bienvenido al registro</h4>
+    <h4 class="modal-title" id="modal-basic-title">{{ 'newStaffModal.modalTitle' | translate}}</h4>
     <button 
       type="button"
       class="close"
@@ -12,12 +12,12 @@
     <div class="d-flex justify-content-center">
       <form (ngSubmit)="saveStaff()" #grupoForm="ngForm">
         <div class="form-group">
-          <label for="nombre">Nombre del staff:</label>
+          <label for="nombre">{{ 'newStaffModal.nameInput' | translate}}</label>
           <input type="text" class="form-control" id="nombre" [(ngModel)]="newStaff.name" name="nombre" required>
-          <label for="nombre">Mail del staff:</label>
+          <label for="nombre">{{ 'newStaffModal.mailInput' | translate}}</label>
           <input type="text" class="form-control" id="mail" [(ngModel)]="newStaff.mail" name="nombre" required>
         </div>
-        <button type="submit" class="btn btn-primary">Crear Grupo</button>
+        <button type="submit" class="btn btn-primary">{{ 'newStaffModal.createButton' | translate}}</button>
       </form>
     </div>
 </div>
