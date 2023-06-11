@@ -9,6 +9,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { AdminDashboardComponent } from './dashboards/admin-dashboard/admin-dashboard.component';
 import { CompetitionComponent } from './competition/competition.component';
 import { StaffDashboardsComponent } from './dashboards/staff-dashboards/staff-dashboards.component';
+import { AdminGuard } from './admin-guard';
 
 const routes: Routes = [
   {
@@ -38,10 +39,12 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
+    canActivate: [AdminGuard],
     component: AdminDashboardComponent
   },
   {
     path: 'staff',
+    canActivate: [AdminGuard],
     component: StaffDashboardsComponent
   },
   {

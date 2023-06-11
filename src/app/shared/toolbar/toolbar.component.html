@@ -13,7 +13,7 @@
           <div class="dropdown-menu">
             <a class="dropdown-item" routerLink="configprofile">{{ 'toolbarDropdown.userProfile' | translate }}</a>
             <a class="dropdown-item" routerLink="media">{{ 'header.mediaLink' | translate }}</a>
-            <a class="dropdown-item" routerLink="dashboard" *ngIf="userRole == 'admin'">{{ 'header.staffDashboardLink' | translate }}</a>
+            <a class="dropdown-item" routerLink="dashboard" *ngIf="userRole == 'admin'">{{ 'header.adminDashboardLink' | translate }}</a>
             <a class="dropdown-item" routerLink="staff" *ngIf="userRole == 'staff'">{{ 'header.staffGamesLink' | translate }}</a>
             <a class="dropdown-item" 
               (click)="logSession()"

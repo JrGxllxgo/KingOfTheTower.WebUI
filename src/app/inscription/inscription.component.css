@@ -11,6 +11,10 @@
   .navbar {
     margin-top: 30% !important;
   }
+
+  .error{
+    padding-top: 50% !important;
+  }
 }
 
 .nav-link.active {

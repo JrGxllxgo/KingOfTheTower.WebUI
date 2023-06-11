@@ -36,6 +36,7 @@ import { CompetitionComponent } from './competition/competition.component';
 import { NewStaffModalComponent } from './shared/new-staff-modal/new-staff-modal.component';
 import { StaffDashboardsComponent } from './dashboards/staff-dashboards/staff-dashboards.component';
 import { ModGameModalComponent } from './shared/mod-game-modal/mod-game-modal.component';
+import { AdminGuard } from './admin-guard';
 
 @NgModule({
   declarations: [
@@ -95,7 +96,8 @@ import { ModGameModalComponent } from './shared/mod-game-modal/mod-game-modal.co
         }
       } as SocialAuthServiceConfig,
     },
-    Location
+    Location,
+    [AdminGuard]
   ],
   bootstrap: [
     AppComponent,

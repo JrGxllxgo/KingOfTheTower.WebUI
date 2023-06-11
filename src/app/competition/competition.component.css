@@ -1,3 +1,9 @@
+@media (max-width: 550px) {
+    .courts {
+      padding-top: 30% !important;
+    }
+  }
+
 .component-body {
     color: white;
     padding-top: 8%;

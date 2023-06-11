@@ -4,6 +4,7 @@ import { LoginModalComponent } from '../login-modal/login-modal.component';
 import { LoginService } from 'src/app/services/login.service';
 import { NotifierService } from 'src/app/services/notifier.service';
 import { DOCUMENT, Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-toolbar',
@@ -19,13 +20,12 @@ export class ToolbarComponent {
     private _modalService: NgbModal,
     private _loginService: LoginService,
     private _toastr: NotifierService,
-    private _location: Location
+    private _router: Router
   ){}
 
   async ngOnInit(){
     await this._loginService.getUserData().subscribe(
       (data: any) => {
-        // console.log(data.role);
         this.userRole = data.role;
       },
       (error: any) => {
@@ -40,9 +40,9 @@ export class ToolbarComponent {
   }
 
   private logout(){
+    this._router.navigate(['/welcome']);
     sessionStorage.removeItem("token");
-    this.userRole = 'base_user'
-    this.document.location.href = this.document.location.href;
+    this.userRole = 'base_user';
   }
 
   public logSession(){

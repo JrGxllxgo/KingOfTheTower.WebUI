@@ -1,3 +1,8 @@
+@media (max-width: 550px) {
+    .row {
+      padding-top: 10% !important;
+    }
+  }
 .row {
     padding-top: 3%;
     color: white;
