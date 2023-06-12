@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { PlayerModel } from 'src/app/models/playerModel';
 import { InscriptionService } from '../../services/inscription.service';
 import { TeamModel } from 'src/app/models/teamModel';
+import { NotifierService } from 'src/app/services/notifier.service';
 
 @Component({
   selector: 'app-player-data',
@@ -10,12 +11,21 @@ import { TeamModel } from 'src/app/models/teamModel';
 })
 export class PlayerDataComponent {
   public allPlayers: PlayerModel[] = []
-  public teamSigned: string = '';
+  public teamSigned: TeamModel = {
+    name: '',
+    category: '',
+    wins: 0,
+    defeats: 0,
+    points_diff: 0,
+    classification_points: 0,
+    pay: false,
+  };
 
   constructor(
-    private _inscriptionService: InscriptionService
+    private _inscriptionService: InscriptionService,
+    private _toastr: NotifierService
   ){
-    this.teamSigned = this._inscriptionService.getTeamDataForm().name;
+    this.teamSigned = this._inscriptionService.getTeamDataForm();
     this.initializeForm();
   }
 
@@ -42,5 +52,6 @@ export class PlayerDataComponent {
   //Method to save players
   public savePlayersData(){
     this._inscriptionService.setPlayersData(this.allPlayers);
+    this._toastr.showSuccess('Los datos se han guardado correctamente.', 'Todo correcto');
   }
 }

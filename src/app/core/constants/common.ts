@@ -32,10 +32,10 @@ export class CommonConstants {
     public static PLAYERS: string = 
         environment.baseUrl + 'api/Players/getAllPlayers';
     public static PLAYER_SEVERAL: string =
-        environment.baseUrl + 'api/Players/register'
+        environment.baseUrl + 'api/Players/registerSeveral'
 
     public static GAME_REGISTER: string =
-        environment.baseUrl + 'api/Games/registerSeveral';
+        environment.baseUrl + 'api/Games/register';
     public static GAMES_BY_COURT: string = 
         environment.baseUrl + 'api/Games/getGameByCourt/';
     public static GAMES_BY_STAFF: string = 

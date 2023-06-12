@@ -16,7 +16,6 @@ export class InscriptionService {
 
   public setTeamData(teamData: TeamModel){
     this.teamData = teamData;
-    // console.log(teamData);
   }
 
   public getTeamDataForm(): TeamModel {
@@ -25,26 +24,27 @@ export class InscriptionService {
 
   public setPlayersData(playerFormData: PlayerModel []){
     this.playersData = playerFormData;
-    // console.log(this.playersData);
+    console.log(this.playersData);
   }
 
   public getPlayersData(): PlayerModel[] {
     return this.playersData;
   }
 
-  public createPlayers(players: PlayerModel[], teamId: number){
-    console.log(players);
+  public createPlayers(players: PlayerModel[], newTeam:TeamModel){
+    this.playersData = players;
   }
 
-  public createNewTeam(newTeam: TeamModel){
+  public createNewTeam(){
+    // console.log(this.playersData)
     var myHeaders = new Headers();
 
     myHeaders.append("Content-Type", "application/json");
 
-    return fetch(CommonConstants.TEAM_REGISTER, {
+    return fetch(CommonConstants.PLAYER_SEVERAL, {
       method: 'POST',
       headers: myHeaders,
-      body: JSON.stringify(newTeam),
+      body: JSON.stringify(this.playersData),
       redirect: 'follow'
     });
   }

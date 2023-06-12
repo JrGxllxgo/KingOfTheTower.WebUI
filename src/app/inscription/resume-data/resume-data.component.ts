@@ -23,15 +23,14 @@ export class ResumeDataComponent {
   }
 
   public async submitForm(){
-      await this._inscriptionService.createNewTeam(this.resumeTeamData)
-        .then(response => {
-          this.teamCreated = response.json();
-          // console.log(response.json())
-        })
-        .then(result => {
-          this._toastr.showSuccess('Inscripción mandada con éxito', ' Todo correcto')})
-        .catch(error => this._toastr.showError(error, ' Algo no ha ido bien...'));
-      console.log(this.teamCreated)
-      this._inscriptionService.createPlayers(this.allPlayers, this.teamCreated.id);
-  }
+      this._inscriptionService.createNewTeam()
+      .then(async response => {
+        if (response.status == 500){          
+          let errorMessage = await response.text();
+          this._toastr.showError(errorMessage, ' Algo no ha ido bien...')
+        }else {
+          this._toastr.showSuccess('Inscripción mandada con éxito', ' Todo correcto')
+        }})
+      .catch(error => this._toastr.showError(error, ' Algo no ha ido bien...'));
+    }
 }

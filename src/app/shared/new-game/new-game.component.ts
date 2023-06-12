@@ -99,13 +99,10 @@ export class NewGameComponent {
       this._gameService.createGame(this.newGame)
       .then(async response => {
         if (response.ok){
-          let result = await response.json();
           this.dismissModal();
         } else if (response.status == 500){          
           let errorMessage = await response.text();
           this._toastr.showError(errorMessage, ' Algo no ha ido bien...')
-        } else {
-          console.log(response.status);
         }
       })
       .then(result => this._toastr.showSuccess('El partido se ha guardado con éxito', ' Todo correcto'))
