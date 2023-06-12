@@ -8,15 +8,15 @@ export class NotifierService {
 
   constructor( private _toastr:ToastrService ) { }
 
-  public async showSuccess(title: string, body: string){
-    this._toastr.success(title, body)
+  public async showSuccess(body: string){
+    this._toastr.success('Todo ha ido correctamente...', body)
   }
 
-  public showError(title: string, body: string){
-    this._toastr.error(title, body);
+  public showError(body: string){
+    this._toastr.error('Algo no ha ido bien...', body);
   }
 
-  public showWarning(title: string, body: string){
-    this._toastr.warning(title, body);
+  public showWarning(body: string){
+    this._toastr.warning('Atención!', body);
   }
 }

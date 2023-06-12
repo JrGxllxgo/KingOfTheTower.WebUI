@@ -38,7 +38,7 @@ export class StaffDashboardsComponent {
         this.staffGames = data;
       },
       (error) => {
-        this._toastr.showError('Hubo un problema con el usuario', 'Error')
+        this._toastr.showError('Hubo un problema con el usuario')
       }
     )
   }
@@ -49,7 +49,7 @@ export class StaffDashboardsComponent {
         this.getGames(data.id);
       },
       (error) => {
-        this._toastr.showError('Hubo un problema con el usuario', 'Error')
+        this._toastr.showError('Hubo un problema con el usuario')
       }
     )
   }

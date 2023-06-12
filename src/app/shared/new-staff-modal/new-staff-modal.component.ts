@@ -33,7 +33,7 @@ export class NewStaffModalComponent {
   public saveStaff(){
     this._staffService.createStaff(this.newStaff)
     .then(response => this.dismissModal())
-    .then(result => this._toastr.showSuccess('El usuario se ha guardado con éxito', ' Todo correcto'))
-    .catch(error => this._toastr.showError(error, ' Algo no ha ido bien...'));
+    .then(result => this._toastr.showSuccess('El usuario se ha guardado con éxito'))
+    .catch(error => this._toastr.showError(error));
   }
 }

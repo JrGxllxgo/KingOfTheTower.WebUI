@@ -60,12 +60,12 @@ export class ModGameModalComponent {
         this.dismissModal();
       } else if (response.status == 500){          
         let errorMessage = await response.text();
-        this._toastr.showError(errorMessage, ' Algo no ha ido bien...')
+        this._toastr.showError(errorMessage)
       } else {
         console.log(response.status);
       }
     })
-    .then(result => this._toastr.showSuccess('El partido se ha guardado con éxito', ' Todo correcto'))
-    .catch(error => this._toastr.showError(error, ' Algo no ha ido bien...'));
+    .then(result => this._toastr.showSuccess('El partido se ha guardado con éxito'))
+    .catch(error => this._toastr.showError(error));
   }
 }

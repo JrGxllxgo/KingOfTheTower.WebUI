@@ -38,11 +38,11 @@ export class TeamDataComponent {
   
   public saveTeamData(){
     if(this.newTeam.name == '' || this.newTeam.category == ''){
-      this._toastService.showWarning('Alguno de los campos están vacíos.', 'Atento!');
+      this._toastService.showWarning('Alguno de los campos están vacíos.');
     }
     else{
       this._inscriptionService.setTeamData(this.newTeam);
-      this._toastService.showSuccess('Los datos se han guardado correctamente.', 'Todo correcto');
+      this._toastService.showSuccess('Los datos se han guardado correctamente.');
     }
   }
 }

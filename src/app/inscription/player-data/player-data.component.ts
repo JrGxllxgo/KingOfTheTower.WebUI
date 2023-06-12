@@ -52,6 +52,6 @@ export class PlayerDataComponent {
   //Method to save players
   public savePlayersData(){
     this._inscriptionService.setPlayersData(this.allPlayers);
-    this._toastr.showSuccess('Los datos se han guardado correctamente.', 'Todo correcto');
+    this._toastr.showSuccess('Los datos se han guardado correctamente.');
   }
 }

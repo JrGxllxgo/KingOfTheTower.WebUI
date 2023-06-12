@@ -61,7 +61,7 @@ export class CompetitionComponent {
         }
       },
       (error: any) => {
-        this._toastr.showError(error, 'Algo no ha salido bien...')
+        this._toastr.showError(error)
       }
       )
   }

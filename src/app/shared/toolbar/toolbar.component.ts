@@ -29,7 +29,7 @@ export class ToolbarComponent {
         this.userRole = data.role;
       },
       (error: any) => {
-        this._toastr.showError(error, 'Algo no ha ido bien...');
+        this._toastr.showError(error);
       }
     )
   }

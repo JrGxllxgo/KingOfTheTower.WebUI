@@ -24,7 +24,7 @@ export class AdminGuard implements CanActivate {
         }
 
             // Redirige a una página de acceso denegado o a otra ruta
-            this._toastr.showError('No tienes permisos para acceder a este apartado', 'Error de permisos')
+            this._toastr.showError('No tienes permisos para acceder a este apartado')
             this._router.navigate(['/information']); // Reemplaza '/acceso-denegado' con la ruta a la página de acceso denegado
         return false;
   }

@@ -34,7 +34,7 @@ export class ListModalComponent {
             this.dataToShow = response
           },
           (error: any) => {
-            this._toastr.showError(error.message, 'Algo no ha ido bien...')
+            this._toastr.showError(error.message)
           }
         )
         break;
@@ -44,7 +44,7 @@ export class ListModalComponent {
             this.dataToShow = response
           },
           (error: any) => {
-            this._toastr.showError(error.message, 'Algo no ha ido bien...')
+            this._toastr.showError(error.message)
           }
         )
         break;
@@ -54,7 +54,7 @@ export class ListModalComponent {
             this.dataToShow = response
           },
           (error: any) => {
-            this._toastr.showError(error.message, 'Algo no ha ido bien...')
+            this._toastr.showError(error.message)
           }
         )
         break;

@@ -36,10 +36,10 @@ export class AdminDashboardComponent {
     this._listService.getStaff().subscribe(
       (data: any) => {
         this.staffMembers = data;
-        this._toastr.showSuccess('Se han recuperado los datos correctamente', 'Todo ha ido genial')
+        this._toastr.showSuccess('Se han recuperado los datos correctamente')
       },
       (error: any) => {
-        this._toastr.showError(error, 'Algo no ha ido bien...')
+        this._toastr.showError(error)
       }
     )
   }

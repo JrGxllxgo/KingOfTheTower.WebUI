@@ -93,7 +93,7 @@ export class NewGameComponent {
 
   public createGame(){
     if(this.newGame.team1Id == this.newGame.team2Id){
-      this._toastr.showError('El equipo no puede jugar contra sí mismo', 'Error en los datos introducidos')
+      this._toastr.showError('El equipo no puede jugar contra sí mismo')
     }else{      
       console.log(this.newGame)
       this._gameService.createGame(this.newGame)
@@ -102,11 +102,11 @@ export class NewGameComponent {
           this.dismissModal();
         } else if (response.status == 500){          
           let errorMessage = await response.text();
-          this._toastr.showError(errorMessage, ' Algo no ha ido bien...')
+          this._toastr.showError(errorMessage)
         }
       })
-      .then(result => this._toastr.showSuccess('El partido se ha guardado con éxito', ' Todo correcto'))
-      .catch(error => this._toastr.showError(error, ' Algo no ha ido bien...'));
+      .then(result => this._toastr.showSuccess('El partido se ha guardado con éxito'))
+      .catch(error => this._toastr.showError(error));
     }
   }
 }

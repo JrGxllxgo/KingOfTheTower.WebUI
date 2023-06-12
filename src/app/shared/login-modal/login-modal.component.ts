@@ -70,7 +70,7 @@ export class LoginModalComponent {
           this.user = response.json();
         } )
         .then(result => {
-          this._toastr.showSuccess('Has iniciado sesión correctamente!', ' Todo correcto');
+          this._toastr.showSuccess('Has iniciado sesión correctamente!');
           this.document.location.href = this.document.location.href;
         })
         .catch(error => this.errorLog(error))
@@ -79,6 +79,6 @@ export class LoginModalComponent {
 
   private errorLog(error: any){
     sessionStorage.removeItem("token");
-    this._toastr.showError(error, ' Algo no ha ido bien...')
+    this._toastr.showError(error)
   }
 }

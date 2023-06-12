@@ -27,10 +27,10 @@ export class ResumeDataComponent {
       .then(async response => {
         if (response.status == 500){          
           let errorMessage = await response.text();
-          this._toastr.showError(errorMessage, ' Algo no ha ido bien...')
+          this._toastr.showError(errorMessage)
         }else {
-          this._toastr.showSuccess('Inscripción mandada con éxito', ' Todo correcto')
+          this._toastr.showSuccess('Inscripción mandada con éxito')
         }})
-      .catch(error => this._toastr.showError(error, ' Algo no ha ido bien...'));
+      .catch(error => this._toastr.showError(error));
     }
 }
