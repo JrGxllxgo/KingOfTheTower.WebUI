@@ -23,8 +23,6 @@ export class CommonConstants {
         environment.baseUrl + 'api/Teams/getAllTeams';
     public static TEAMS_BY_GROUP: string =
         environment.baseUrl + 'api/Teams/getTeamByGroup/';
-    public static TEAMS_CLASS: string =
-        environment.baseUrl + 'api/Teams/getTeamClassByGroup/'
 
     public static GROUP_REGISTER: string =
         environment.baseUrl + 'api/Groups/register';
@@ -33,11 +31,11 @@ export class CommonConstants {
 
     public static PLAYERS: string = 
         environment.baseUrl + 'api/Players/getAllPlayers';
-    public static PLAYER_REGISTER: string =
+    public static PLAYER_SEVERAL: string =
         environment.baseUrl + 'api/Players/register'
 
     public static GAME_REGISTER: string =
-        environment.baseUrl + 'api/Games/register';
+        environment.baseUrl + 'api/Games/registerSeveral';
     public static GAMES_BY_COURT: string = 
         environment.baseUrl + 'api/Games/getGameByCourt/';
     public static GAMES_BY_STAFF: string = 

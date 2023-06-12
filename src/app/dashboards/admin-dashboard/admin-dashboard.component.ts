@@ -31,6 +31,7 @@ export class AdminDashboardComponent {
     this.getStaffList();
   }
 
+  // Method that show all staff data
   public getStaffList(){
     this._listService.getStaff().subscribe(
       (data: any) => {
@@ -54,29 +55,29 @@ export class AdminDashboardComponent {
     let modalRef = this._modalService.open(NewStaffModalComponent);
     modalRef.componentInstance.modalReference = modalRef;
   }
-
+  // Method to open the modal that creates a new game
   public openGameModal(){
     let modalRef = this._modalService.open(NewGameComponent);
     modalRef.componentInstance.modalReference = modalRef;
   }
-
+  // Method to open the modal that creates a new group
   public openGroupModal(){
     let modalRef = this._modalService.open(NewGroupComponent);
     modalRef.componentInstance.modalReference = modalRef;
   }
-
+  // Method to open the modal that shows all groups names
   public openAllGroupModal(){
     let modalRef = this._modalService.open(ListModalComponent);
     modalRef.componentInstance.dataQuery = 'groups';
     modalRef.componentInstance.modalReference = modalRef;
   }
-
+  // Method to open the modal that shows all teams names
   public openAllTeamModal(){
     let modalRef = this._modalService.open(ListModalComponent);
     modalRef.componentInstance.dataQuery = 'teams';
     modalRef.componentInstance.modalReference = modalRef;
   }
-
+  // Method to open the modal that shows all players names
   public openAllPlayersModal(){
     let modalRef = this._modalService.open(ListModalComponent);
     modalRef.componentInstance.dataQuery = 'players';

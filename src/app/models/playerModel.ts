@@ -8,5 +8,5 @@ export interface PlayerModel {
     instagram: string;
     want_pics: boolean;
     teamId?: number;
-    team?: string;
+    team?: TeamModel;
 }

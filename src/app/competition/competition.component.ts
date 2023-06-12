@@ -24,6 +24,9 @@ export class CompetitionComponent {
   public classFA: TeamModel[] = [];
   public classFB: TeamModel[] = [];
 
+  public teams: TeamModel[] = [];
+  public groups: GroupModel[] = [];
+
   constructor( 
     private _dataService: DataService,
     private _listService: ListsService,
@@ -35,13 +38,10 @@ export class CompetitionComponent {
       this.getGames(i);
     }
 
-    this.getClass('MasculinoA');
-    this.getClass('MasculinoB');
-    this.getClass('MasculinoC');
-    this.getClass('FemeninoA');
-    this.getClass('FemeninoB');
+    this.getClass();
   }
 
+  // Call to the service to get all games per court
   private getGames(court: number){
     this._dataService.getGames(court).subscribe(
       (data: any) => {
@@ -66,26 +66,18 @@ export class CompetitionComponent {
       )
   }
 
-  private getClass(groupName: string)  {
-    this._listService.getClass(groupName).subscribe(
-      (data: any) => {
-        switch (groupName){
-          case 'MasculinoA':
-            this.classMA = data
-            break;
-          case 'MasculinoB':
-            this.classMB = data
-            break;
-          case 'MasculinoC':
-            this.classMC = data
-            break;
-          case 'FemeninoA':
-            this.classFA = data
-            break;
-          case 'FemeninoB':
-            this.classFB = data
-            break;
+  // Call to the service to get groups classiffication
+  private getClass()  {
+    this._listService.getTeams().subscribe(
+      (data: any) => { 
+        this.teams = data;
+
+        this.teams.forEach(element => {
+          if(!this.groups.find(g => g.id == element.group?.id) && element.group){
+            this.groups.push(element.group);
           }
+          this.teams.filter(t => t.group?.id == 1)
+        });
       }
     )
   }

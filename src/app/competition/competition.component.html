@@ -1,4 +1,5 @@
 <div class="component-body pb-5 d-flex justify-content-center">
+    <!-- div for the games per court -->
     <div class="courts d-flex flex-column">
         <div class="court">
             <h3>{{ 'courtGamesTable.courtName' | translate}} 1</h3>
@@ -93,13 +94,13 @@
             </table>
         </div>
     </div>
+    <!-- div for groups classification -->
     <div class="classification ps-3">
         <div class="court">
-            <h3>{{ "groupClassTable.groupTitle" | translate}} Masculino A</h3>
-            <table class="table">
+          <table class="table" *ngFor="let group of groups; let index = index">
                 <thead>
                     <tr>
-                      <th scope="col">#</th>
+                      <th scope="col">{{ "groupClassTable.groupTitle" | translate}} {{group.name}}</th>
                       <th scope="col">{{ "groupClassTable.teamTitle" | translate}}</th>
                       <th scope="col">{{ "groupClassTable.winsTitle" | translate}}</th>
                       <th scope="col">{{ "groupClassTable.defeatsTitle" | translate}}</th>
@@ -108,99 +109,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let team of classMA; let index = index">
-                      <td>{{ index }}</td>
-                      <td>{{ team.name }}</td>
-                      <td>{{ team.wins }}</td>
-                      <td>{{ team.defeats }}</td>
-                      <td>{{ team.points_diff }}</td>
-                      <td>{{ team.classification_points }}</td>
-                    </tr>
-                </tbody>
-            </table>
-            <h3>{{ "groupClassTable.groupTitle" | translate}} Masculino B</h3>
-            <table class="table">
-                <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">{{ "groupClassTable.teamTitle" | translate}}</th>
-                      <th scope="col">{{ "groupClassTable.winsTitle" | translate}}</th>
-                      <th scope="col">{{ "groupClassTable.defeatsTitle" | translate}}</th>
-                      <th scope="col">{{ "groupClassTable.pdiffTitle" | translate}}</th>
-                      <th scope="col">{{ "groupClassTable.cpointsTitle" | translate}}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let team of classMB; let index = index">
-                      <td>{{ index }}</td>
-                      <td>{{ team.name }}</td>
-                      <td>{{ team.wins }}</td>
-                      <td>{{ team.defeats }}</td>
-                      <td>{{ team.points_diff }}</td>
-                      <td>{{ team.classification_points }}</td>
-                    </tr>
-                </tbody>
-            </table>
-            <h3>{{ "groupClassTable.groupTitle" | translate}} Masculino C</h3>
-            <table class="table">
-                <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">{{ "groupClassTable.teamTitle" | translate}}</th>
-                      <th scope="col">{{ "groupClassTable.winsTitle" | translate}}</th>
-                      <th scope="col">{{ "groupClassTable.defeatsTitle" | translate}}</th>
-                      <th scope="col">{{ "groupClassTable.pdiffTitle" | translate}}</th>
-                      <th scope="col">{{ "groupClassTable.cpointsTitle" | translate}}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let team of classMC; let index = index">
-                      <td>{{ index }}</td>
-                      <td>{{ team.name }}</td>
-                      <td>{{ team.wins }}</td>
-                      <td>{{ team.defeats }}</td>
-                      <td>{{ team.points_diff }}</td>
-                      <td>{{ team.classification_points }}</td>
-                    </tr>
-                </tbody>
-            </table>
-            <h3>{{ "groupClassTable.groupTitle" | translate}} Femnino A</h3>
-            <table class="table">
-                <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">{{ "groupClassTable.teamTitle" | translate}}</th>
-                      <th scope="col">{{ "groupClassTable.winsTitle" | translate}}</th>
-                      <th scope="col">{{ "groupClassTable.defeatsTitle" | translate}}</th>
-                      <th scope="col">{{ "groupClassTable.pdiffTitle" | translate}}</th>
-                      <th scope="col">{{ "groupClassTable.cpointsTitle" | translate}}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let team of classFA; let index = index">
-                      <td>{{ index }}</td>
-                      <td>{{ team.name }}</td>
-                      <td>{{ team.wins }}</td>
-                      <td>{{ team.defeats }}</td>
-                      <td>{{ team.points_diff }}</td>
-                      <td>{{ team.classification_points }}</td>
-                    </tr>
-                </tbody>
-            </table>
-            <h3>{{ "groupClassTable.groupTitle" | translate}} Femenino B</h3>
-            <table class="table">
-                <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">{{ "groupClassTable.teamTitle" | translate}}</th>
-                      <th scope="col">{{ "groupClassTable.winsTitle" | translate}}</th>
-                      <th scope="col">{{ "groupClassTable.defeatsTitle" | translate}}</th>
-                      <th scope="col">{{ "groupClassTable.pdiffTitle" | translate}}</th>
-                      <th scope="col">{{ "groupClassTable.cpointsTitle" | translate}}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let team of classFB; let index = index">
+                    <tr *ngFor="let team of teams | groupFilter: group; let index = index">
                       <td>{{ index }}</td>
                       <td>{{ team.name }}</td>
                       <td>{{ team.wins }}</td>

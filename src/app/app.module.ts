@@ -37,6 +37,7 @@ import { NewStaffModalComponent } from './shared/new-staff-modal/new-staff-modal
 import { StaffDashboardsComponent } from './dashboards/staff-dashboards/staff-dashboards.component';
 import { ModGameModalComponent } from './shared/mod-game-modal/mod-game-modal.component';
 import { AdminGuard } from './admin-guard';
+import { GroupFilterPipe } from './core/group-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { AdminGuard } from './admin-guard';
     CompetitionComponent,
     NewStaffModalComponent,
     StaffDashboardsComponent,
-    ModGameModalComponent
+    ModGameModalComponent,
+    GroupFilterPipe
   ],
   imports: [
     BrowserModule,
