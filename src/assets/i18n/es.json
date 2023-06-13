@@ -1,4 +1,9 @@
 {
+    "welcome": {
+        "winners": "¡Estos son nuestros últimos ganadores masculinos!",
+        "newSponsor": "Un nuevo gran patrocinador ha llegado a nuestro buzón...",
+        "nextEdition": "¿Se aproxima la siguiente edición?"
+    },
     "footer": {
         "offPatterns": "Colaboradores Oficiales",
         "mainSponsor": "Patrocinador Principal",
@@ -10,11 +15,14 @@
         "rulesLink": "Reglas",
         "contactLink": "Contacto",
         "profile": "Perfil",
-        "inscriptionLink": "Inscríbete"
+        "inscriptionLink": "Inscríbete",
+        "adminDashboardLink": "Dashboard",
+        "staffGamesLink": "Mis partidos",
+        "competitionLink": "Competición",
+        "infoLink": "Información"
     },
     "logModal": {
-        "newUser": "Nuevo Usuario",
-        "existUser": "Usuario Existente"
+        "newUser": "Iniciar sesión"
     },
     "configUser": {
         "formHeader": "Configuración del Perfil",
@@ -29,13 +37,18 @@
     "profileConfig": {
         "noSession": "No hay ninguna sesión iniciada"
     },
-    "modal": {
-        "loggedTitle": "Inicio de sesión",
+    "toasts": {
+        "warnTitle": "Atención",
+        "successTitle": "Todo correcto",
+        "errorTitle": "Error",
         "loggedBody": "Se ha iniciado sesión correctamente",
-        "errorLoggedTitle": "Error",
-        "errorLoggedBody": "Ha ocurrido un error con la conexión a la base de datos, vuelva a intentarlo más tarde"
+        "errorLoggedBody": "Ha ocurrido un error con la base de datos, vuelva a intentarlo más tarde",
+        "dataSavedBody": "Los datos se han guardado correctamente.",
+        "emptyDataBody": "Alguno de los campos están vacíos",
+        "correctInsBody": "Inscipción mandada con éxito"
     },
     "inscriptions":{
+        "logFirst": "Debes de iniciar sesión para poder hacer una inscripción",
         "teamInfo": "Información del equipo",
         "playersInfo": "Información de los jugadores",
         "resumeInfo": "Finalizar inscripción",
@@ -60,6 +73,71 @@
         },
         "resumeData": {
             "resumeTitle": "Resumen de la inscripción"
+        },
+        "modalSendData": {
+            "teamData": {
+                "errorModalDatosBody": "Por favor comprueba que ha introducido los datos del equipo correctamente",
+                "errorModalDatosTitle": "Error en los datos del equipo"
+            }
         }
+    },
+    "adminDashboard": {
+        "allGroupBtn": "Ver los grupos",
+        "allTeamBtn": "Ver los equipos",
+        "allPlayerBtn": "Ver los jugadores",
+        "newGroupButton": "Crear nuevo grupo",
+        "newGameButton": "Añadir partido",
+        "staffHeader": "Miembros del staff",
+        "staffName": "Nombre",
+        "staffMail": "Correo",
+        "dataModelTitle": "Información",
+        "totalLabel": "Total "
+    },
+    "updateResultModal": {
+        "updateTitle": "Añadir resultado de partido",
+        "pointsTeam": "Puntos equipo: ",
+        "sendButton": "Actualizar resultado"
+    },    
+    "groupClassTable": {
+        "groupTitle": "Grupo ",
+        "teamTitle": "Equipo",
+        "winsTitle": "Victorias",
+        "defeatsTitle": "Derrotas",
+        "pdiffTitle": "+/-",
+        "cpointsTitle": "Puntos"
+    },
+    "courtGamesTable": {
+        "courtName": "Pista ",
+        "localTeam": "Local",
+        "visitTeam": "Visitante",
+        "schedule": "Horario",
+        "resultGame": "Resultado"
+    },
+    "media": {
+        "summer22": "Verano 2022",
+        "feb23": "Febrero 2023"
+    },
+    "newGameModal": {
+        "modalTitle": "Añade el partido",
+        "groupSearch": "Selecciona el grupo del partido",
+        "team1Input": "Equipo local",
+        "team2Input": "Equipo visitante",
+        "team1Score": "Puntos equipo local",
+        "team2Score": "Puntos equipo visitante",
+        "court": "Pista",
+        "schedule": "Hora del partido",
+        "staffInput": "Encargado",
+        "createButton": "Crear partido"
+    },
+    "newGroupModal": {
+        "modalTitle": "Añade el grupo",
+        "groupName": "Nombre del equipo",
+        "sendGroup": "Crear grupo"
+    },
+    "newStaffModal": {
+        "modalTitle": "Añade el voluntario",
+        "nameInput": "Nombre del voluntario",
+        "mailInput": "Correo del voluntario",
+        "createButton": "Crear voluntario"
     }
 }

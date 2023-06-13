@@ -1,3 +1,9 @@
+@media (max-width: 550px) {
+    .media {
+      padding-top: 30% !important;
+    }
+  }
+
 .media{
     /* background-color: aqua; */
     padding-top: 10%;
@@ -5,4 +11,9 @@
 
 .edition{
     text-align: center;
+}
+
+img {
+    margin: 2%;
+    max-width: 10% !important;
 }

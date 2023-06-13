@@ -1,4 +1,9 @@
 {
+    "welcome": {
+        "winners": "These are our lasts male winners!!!",
+        "newSponsor": "A big new sponsor has reached at our MD...",
+        "nextEdition": "A new edition is coming...?"
+    },
     "footer": {
         "offPatterns": "Official Patterns",
         "mainSponsor": "Main Sponsors",
@@ -10,7 +15,11 @@
         "rulesLink": "Rules",
         "contactLink": "Contact Us",
         "profile": "Profile",
-        "inscriptionLink": "Inscríbete"
+        "inscriptionLink": "Inscription",
+        "adminDashboardLink": "Dashboard",
+        "staffGamesLink": "My Games",
+        "competitionLink": "Competition",
+        "infoLink": "Información"
     },
     "logModal": {
         "newUser": "New User",
@@ -29,13 +38,18 @@
     "profileConfig": {
         "noSession": "No account avaible"
     },
-    "modal": {
-        "loggedTitle": "Log In",
-        "loggedBody": "Logging was correct",
-        "errorLoggedTitle": "Error",
-        "errorLoggedBody": "There's a problem qith db connection, please try later."
+    "toasts": {
+        "warnTitle": "Warning!",
+        "successTitle": "All right!",
+        "errorTitle": "Error!",
+        "loggedBody": "Logged successfull",
+        "errorLoggedBody": "There's a DB problem, please try later",
+        "dataSavedBody": "Data saved correctly",
+        "emptyDataBody": "There's data empty",
+        "correctInsBody": "Inscription sent correctly"
     },
     "inscriptions":{
+        "logFirst": "You should be logged",
         "teamInfo": "Team information",
         "playersInfo": "PLayer information",
         "resumeInfo": "Finish register",
@@ -60,6 +74,71 @@
         },
         "resumeData": {
             "resumeTitle": "Register information"
+        },
+        "modalSendData": {
+            "teamData": {
+                "errorModalDatosBody": "Please check all the information of the teams.",
+                "errorModalDatosTitle": "Error on team data"
+            }
         }
+    },
+    "adminDashboard": {
+        "allGroupBtn": "See all groups",
+        "allTeamBtn": "See all teams",
+        "allPlayerBtn": "See all players",
+        "newGroupButton": "New Group",
+        "newGameButton": "Add game",
+        "staffHeader": "Staff Members",
+        "staffName": "Name",
+        "staffMail": "Mail",
+        "dataModelTitle": "Data",
+        "totalLabel": "Total "
+    },
+    "updateResultModal": {
+        "updateTitle": "Add game result",
+        "pointsTeam": "Points team:",
+        "sendButton": "Update result"
+    },
+    "groupClassTable": {
+        "groupTitle": "Group ",
+        "teamTitle": "Team",
+        "winsTitle": "Wins",
+        "defeatsTitle": "Defeats",
+        "pdiffTitle": "+/-",
+        "cpointsTitle": "Points"
+    },
+    "courtGamesTable": {
+        "courtName": "Court ",
+        "localTeam": "Local team",
+        "visitTeam": "Visit team",
+        "schedule": "Schedule",
+        "resultGame": "Result"
+    },
+    "media": {
+        "summer22": "Summer 2022",
+        "feb223": "February 2023"
+    },
+    "newGameModal": {
+        "modalTitle": "Add the game",
+        "groupSearch": "Select group",
+        "team1Input": "Local team",
+        "team2Input": "Visit team",
+        "team1Score": "Local team points",
+        "team2Score": "Visit team points",
+        "court": "Court",
+        "schedule": "Game schedule",
+        "staffInput": "Staff",
+        "createButton": "Create game"
+    },
+    "newGroupModal": {
+        "modalTitle": "Add new group",
+        "groupName": "Group name",
+        "sendGroup": "Create group"
+    },
+    "newStaffModal": {
+        "modalTitle": "Add staff",
+        "nameInput": "Staff name",
+        "mailInput": "Staff mail",
+        "createButton": "Create staff"
     }
 }

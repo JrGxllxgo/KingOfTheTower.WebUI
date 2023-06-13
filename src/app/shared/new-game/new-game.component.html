@@ -1,0 +1,73 @@
+<div class="modal-header">
+  <button 
+      type="button"
+      class="close"
+      (click)="showGameForm = false"
+    >
+    <span aria-hidden="true"><i class="bi bi-arrow-left-circle-fill"></i></span>
+    </button>
+    <h4 class="modal-title" id="modal-basic-title">Bienvenido al registro</h4>
+    <button 
+      type="button"
+      class="close"
+      (click)="dismissModal()"
+    >
+    <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body d-flex justify-content-evenly flex-column">
+    <div class="d-flex justify-content-center">
+        <form action="my-form" *ngIf="!showGameForm" class="d-flex" (ngSubmit)="selectGroup()">
+          <div class="form-group d-flex justify-space-evenly">
+            <div class="staffText">
+              <label for="encargado">{{ 'newGameModal.groupSearch' | translate}}</label>
+            </div>
+            <div class="select">
+              <select class="form-control d-flex flex-row-reverse" id="staff" [(ngModel)]="groupSelected" name="groupSelected">
+                <option *ngFor="let group of groups" [value]="group.name">{{ group.name }}</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
+          </div>
+        </form>
+        <form class="my-form" *ngIf="showGameForm" (ngSubmit)="createGame()">
+          <div class="form-group">
+              <label for="equipo1">{{ 'newGameModal.team1Input' | translate}}</label>
+              <select class="form-control" id="group" [(ngModel)]="newGame.team1Id" name="team1Id">
+                <option *ngFor="let team of teams" [value]="team.id" >{{ team.name }} </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="equipo1">{{ 'newGameModal.team2Input' | translate}}</label>
+              <select class="form-control" id="group" [(ngModel)]="newGame.team2Id" name="team2Id">
+                <option *ngFor="let team of teams" [value]="team.id" >{{ team.name }} </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="puntosEquipo1">{{ 'newGameModal.team1Score' | translate}}</label>
+              <input type="number" name="score1" class="form-control" id="puntosEquipo1" placeholder="Puntos Equipo 1" max="22" min="0" [(ngModel)]="newGame.score1">
+            </div>
+            <div class="form-group">
+              <label for="puntosEquipo2">{{ 'newGameModal.team2Score' | translate}}</label>
+              <input type="number" name="score2" class="form-control" id="puntosEquipo2" placeholder="Puntos Equipo 2" max="22" min="0" [(ngModel)]="newGame.score2">
+            </div>
+            <div class="form-group">
+              <label for="pista">{{ 'newGameModal.court' | translate}}</label>
+              <select class="form-control" id="pista" [(ngModel)]="newGame.court" name="court">
+                <option *ngFor="let pista of courts" [value]="pista">{{ pista }}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="hora">{{ 'newGameModal.schedule' | translate}}</label>
+              <input type="datetime-local" name="schedule" class="form-control dtpicker-time" id="hora" placeholder="Hora de partido" [(ngModel)]="newGame.schedule">
+            </div>
+            <div class="form-group">
+              <label for="pista">{{ 'newGameModal.staffInput' | translate}}</label>
+              <select class="form-control" id="staff" [(ngModel)]="newGame.staffId" name="staff">
+                <option *ngFor="let staff of staff" [value]="staff.id">{{ staff.name }}</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">{{ 'newGameModal.createButton' | translate}}</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{ 'newStaffModal.modalTitle' | translate}}</h4>
+    <button 
+      type="button"
+      class="close"
+      (click)="dismissModal()"
+    >
+    <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body d-flex justify-content-evenly flex-column">
+    <div class="d-flex justify-content-center">
+      <form (ngSubmit)="saveStaff()" #grupoForm="ngForm">
+        <div class="form-group">
+          <label for="nombre">{{ 'newStaffModal.nameInput' | translate}}</label>
+          <input type="text" class="form-control" id="nombre" [(ngModel)]="newStaff.name" name="nombre" required>
+          <label for="nombre">{{ 'newStaffModal.mailInput' | translate}}</label>
+          <input type="text" class="form-control" id="mail" [(ngModel)]="newStaff.mail" name="nombre" required>
+        </div>
+        <button type="submit" class="btn btn-primary">{{ 'newStaffModal.createButton' | translate}}</button>
+      </form>
+    </div>
+</div>

@@ -1,4 +1,5 @@
-<div class="component-body" *ngIf="checkUserLog()">
+<!-- Div if the user is logged -->
+<div class="component-body-inscription pb-5 h-100" *ngIf="checkUserLog()">
   <div class="options d-flex justify-content-center">
     <nav class="navbar navbar-expand">
       <div class="container">
@@ -18,7 +19,7 @@
   </div>
 
   <!-- Differents form with data -->
-  <div class="container">
+  <div class="container w-60">
     <ng-container [ngSwitch]="selectedOption">
   
       <!-- Componente teamData -->
@@ -41,6 +42,8 @@
 </div>
 
 <!-- Div to show if the user is not logged -->
-<div class="component-body mt-5" *ngIf="!checkUserLog()">
-  <h1>Debes de iniciar sesión</h1>
+<div class="component-body error d-flex align-items-center justify-content-center" *ngIf="!checkUserLog()">
+  <div class="alert alert-danger" role="alert">
+    {{ 'inscriptions.logFirst' | translate }}
+  </div>
 </div>

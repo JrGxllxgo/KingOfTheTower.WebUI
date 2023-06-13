@@ -31,11 +31,8 @@
           <div class="card shadow-sm">
             <img class="card-img-top h-20 w-10" src="../../assets/images/winners.jpg" alt="Card image cap">
             <div class="card-body">
-              <p class="card-text">Estos son los ganadores de la última edición.</p>
+              <p class="card-text">{{ 'welcome.winners' | translate }}</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <small class="text-body-secondary" routerLink="/news">Seguir leyendo</small>
-                </div>
               </div>
             </div>
           </div>
@@ -43,11 +40,8 @@
         <div class="col">
           <div class="card shadow-sm">
             <img class="card-img-top" src="../../assets/images/footer/logo-Red-Bull.png" alt="Card image cap"><div class="card-body">
-              <p class="card-text">Gran patrocinador se une a nuestro evento!</p>
+              <p class="card-text">{{ 'welcome.newSponsor' | translate }}</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <small class="text-body-secondary" routerLink="/news">Seguir leyendo</small>
-                </div>
               </div>
             </div>
           </div>
@@ -56,10 +50,7 @@
           <div class="card shadow-sm">
             <img class="card-img-top" src="../../assets/images/mainLogo.png" alt="Card image cap">
             <div class="card-body">
-              <p class="card-text">Siguiente edición a la vista!</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-body-secondary" routerLink="/news">Seguir leyendo</small>
-              </div>
+              <p class="card-text">{{ 'welcome.nextEdition' | translate }}</p>
             </div>
           </div>
         </div>

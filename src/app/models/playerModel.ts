@@ -1,10 +1,12 @@
 import { TeamModel } from "./teamModel";
 
 export interface PlayerModel {
+    id?: number;
     nif: string;
-    player_name: string;
+    name: string;
     phone: string;
     instagram: string;
     want_pics: boolean;
-    team: TeamModel;
+    teamId?: number;
+    team?: TeamModel;
 }

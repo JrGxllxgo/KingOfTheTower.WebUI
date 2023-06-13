@@ -10,3 +10,11 @@ body{
 .component-body{
     margin-top: 7%;
 }
+
+.component-body {
+    background-image: url('/assets/images/mainLogo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}

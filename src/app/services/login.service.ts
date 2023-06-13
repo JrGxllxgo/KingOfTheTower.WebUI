@@ -10,7 +10,7 @@ import { UserModel } from '../models/userModel';
 export class LoginService {
   public userObj: any = {};
 
-  constructor(private http: HttpClient) {}
+  constructor(private _http: HttpClient) {}
 
   public getUserObj(){
     let token = sessionStorage.getItem("token") as string;
@@ -27,13 +27,20 @@ export class LoginService {
     return JSON.parse(jsonPayload)
   }
   
-  public async setRegister(user: UserModel){
-    var body = '{"id": 0,"name": "string","mail": "string","role": "string","player": {"id": 0,"nif": "string","name": "string","phone": "string","instagram": "string","wantPics": true,"team": {"id": 0,"name": "string","category": "string","pay": true,"wins": 0,"defeats": 0,"points_diff": 0,"classification_points": 0}}}'
-    
-    return this.http.post(CommonConstants.USER_REGISTER, body);
+  public setRegister(user: UserModel){
+    var myHeaders = new Headers();
+
+    myHeaders.append("Content-Type", "application/json");
+
+    return fetch(CommonConstants.USER_REGISTER, {
+      method: 'POST',
+      headers: myHeaders,
+      body: JSON.stringify(user),
+      redirect: 'follow'
+    });
   }
 
-  public updateUserData(user: UserModel){
-    console.log(user)
+  public getUserData(){
+    return this._http.get(CommonConstants.USER_INFORMATION + this.getUserObj().email);
   }
 }

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { InscriptionService } from '../inscription.service';
+import { InscriptionService } from '../../services/inscription.service';
 import { TeamModel } from 'src/app/models/teamModel';
 import { PlayerModel } from 'src/app/models/playerModel';
+import { NotifierService } from 'src/app/services/notifier.service';
 
 @Component({
   selector: 'app-resume-data',
@@ -11,15 +12,25 @@ import { PlayerModel } from 'src/app/models/playerModel';
 export class ResumeDataComponent {
   public resumeTeamData: TeamModel;
   public allPlayers: PlayerModel[];
+  public teamCreated: any;
 
   constructor(
-    private _inscriptionService: InscriptionService
+    private _inscriptionService: InscriptionService,
+    private _toastr: NotifierService
   ){
     this.resumeTeamData = this._inscriptionService.getTeamDataForm();
     this.allPlayers = this._inscriptionService.getPlayersData();
   }
 
-  public submitForm(){
-    this._inscriptionService.sendInscription();
-  }
+  public async submitForm(){
+      this._inscriptionService.createNewTeam()
+      .then(async response => {
+        if (response.status == 500){          
+          let errorMessage = await response.text();
+          this._toastr.showError(errorMessage)
+        }else {
+          this._toastr.showSuccess('Inscripción mandada con éxito')
+        }})
+      .catch(error => this._toastr.showError(error));
+    }
 }

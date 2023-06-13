@@ -1,0 +1,17 @@
+@media (max-width: 550px) {
+    .courts {
+      padding-top: 30% !important;
+    }
+
+    .component-body {
+      flex-direction: column !important;
+    }
+  }
+
+.component-body {
+    color: white;
+    padding-top: 8%;
+}
+th ,tr, rd {
+    color: white;
+}

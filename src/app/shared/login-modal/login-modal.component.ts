@@ -1,10 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Inject, Input } from '@angular/core';
 import {NgbModal, NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
 import { LoginService } from '../../services/login.service';
 import { Router } from '@angular/router';
 import { UserModel } from 'src/app/models/userModel';
 import { CommonConstants } from 'src/app/core/constants/common';
 import { OkModalComponent } from '../ok-modal/ok-modal.component';
+import { NotifierService } from 'src/app/services/notifier.service';
+import { DOCUMENT } from '@angular/common';
 
 type Nullable<T> = T | null;
 declare var google:any
@@ -21,9 +23,10 @@ export class LoginModalComponent {
   modalReference: Nullable<NgbModalRef> = null;
   
   constructor(
+    @Inject(DOCUMENT) private document: Document,
     private _loginService: LoginService,
     private _router: Router,
-    private _modalService: NgbModal
+    private _toastr: NotifierService
   ){}
   
   ngOnInit(): void {
@@ -62,24 +65,20 @@ export class LoginModalComponent {
       userModel.mail = this._loginService.getUserObj().email;
       userModel.role = 'base_user';
 
-      this._loginService.setRegister(userModel).then (
-        (result) => {
-          let modalRef = this._modalService.open(OkModalComponent);
-          modalRef.componentInstance.title = 'modal.loggedTitle';
-          modalRef.componentInstance.body = 'modal.loggedBody';
-          modalRef.componentInstance.modalReference = modalRef;
+       this._loginService.setRegister(userModel)
+        .then (response => {
+          this.user = response.json();
+        } )
+        .then(result => {
+          this._toastr.showSuccess('Has iniciado sesión correctamente!');
+          this.document.location.href = this.document.location.href;
+        })
+        .catch(error => this.errorLog(error))
+      }
+  }
 
-          console.log(result)
-        },
-        (error) => {
-          // sessionStorage.removeItem("token");
-          
-          let modalRef = this._modalService.open(OkModalComponent);
-          modalRef.componentInstance.title = 'modal.errorLoggedTitle';
-          modalRef.componentInstance.body = 'modal.errorLoggedBody';
-          modalRef.componentInstance.modalReference = modalRef;
-        }
-      );
-    }
+  private errorLog(error: any){
+    sessionStorage.removeItem("token");
+    this._toastr.showError(error)
   }
 }

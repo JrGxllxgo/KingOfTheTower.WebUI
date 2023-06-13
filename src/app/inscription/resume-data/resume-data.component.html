@@ -1,10 +1,10 @@
-<div class="row justify-content-center">
+<div class="row d-flex justify-content-center">
     <div class="col-md-8">
       <h2>{{ 'inscriptions.resumeData.resumeTitle' | translate }}</h2>
       <div class="d-flex flex-column justify-content-center">
         <div class="form-group">
           <label>{{ 'inscriptions.teamForm.teamName' | translate }}</label>
-          <p>{{ resumeTeamData.team_name }}</p>
+          <p>{{ resumeTeamData.name }}</p>
         </div>
         <div class="form-group">
           <label>{{ 'inscriptions.teamForm.teamCat' | translate }}</label>
@@ -12,7 +12,7 @@
         </div>
         <div class="form-group">
           <label>{{ 'inscriptions.teamForm.teamPay' | translate }}</label>
-          <p>{{ resumeTeamData.payed ? 'Sí' : 'No' }}</p>
+          <p>{{ resumeTeamData.pay ? 'Sí' : 'No' }}</p>
         </div>
       </div>
       
@@ -28,7 +28,7 @@
           </div>
           <div class="form-group">
             <label>{{ 'inscriptions.playersForm.playerName' | translate }}</label>
-            <p>{{ player.player_name }}</p>
+            <p>{{ player.name }}</p>
           </div>
           <div class="form-group">
             <label>{{ 'inscriptions.playersForm.playerTelf' | translate }}</label>

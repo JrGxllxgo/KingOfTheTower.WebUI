@@ -5,28 +5,39 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { AppRoutingModule } from './app-routing.module';
-import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
-import { NewsComponent } from './news/news.component';
-import { ContactComponent } from './contact/contact.component';
 import { MediaComponent } from './media/media.component';
 import { InformationComponent } from './information/information.component';
-import { RulesComponent } from './rules/rules.component';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+
+import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
-import {
-  GoogleLoginProvider
-} from 'angularx-social-login';
+import { GoogleLoginProvider } from 'angularx-social-login';
 import { CommonModule } from '@angular/common';
 import { BaseModule } from './core/modules/base/base.module';
-import { ProfileConfigComponent } from './profile-config/profile-config.component';
 import { FormsModule } from '@angular/forms';
+
+import { ProfileConfigComponent } from './profile-config/profile-config.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { OkModalComponent } from './shared/ok-modal/ok-modal.component';
 import { TeamDataComponent } from './inscription/team-data/team-data.component';
 import { PlayerDataComponent } from './inscription/player-data/player-data.component';
 import { ResumeDataComponent } from './inscription/resume-data/resume-data.component';
+import { AdminDashboardComponent } from './dashboards/admin-dashboard/admin-dashboard.component';
+import { NewGameComponent } from './shared/new-game/new-game.component';
+import { NewGroupComponent } from './shared/new-group/new-group.component';
+import { ListModalComponent } from './dashboards/list-modal/list-modal.component';
+import { ToastrModule } from 'ngx-toastr';
+import { NotifierComponent } from './notifier/notifier.component'
+import { CommonConstants } from './core/constants/common';
+import { CompetitionComponent } from './competition/competition.component';
+import { NewStaffModalComponent } from './shared/new-staff-modal/new-staff-modal.component';
+import { StaffDashboardsComponent } from './dashboards/staff-dashboards/staff-dashboards.component';
+import { ModGameModalComponent } from './shared/mod-game-modal/mod-game-modal.component';
+import { AdminGuard } from './admin-guard';
+import { GroupFilterPipe } from './core/group-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -35,17 +46,23 @@ import { ResumeDataComponent } from './inscription/resume-data/resume-data.compo
     FooterComponent,
     WelcomeComponent,
     PageNotFoundComponent,
-    NewsComponent,
-    ContactComponent,
     MediaComponent,
     InformationComponent,
-    RulesComponent,
     ProfileConfigComponent,
     InscriptionComponent,
     OkModalComponent,
     TeamDataComponent,
     PlayerDataComponent,
-    ResumeDataComponent
+    ResumeDataComponent,
+    AdminDashboardComponent,
+    NewGameComponent,
+    NewGroupComponent,
+    ListModalComponent,
+    CompetitionComponent,
+    NewStaffModalComponent,
+    StaffDashboardsComponent,
+    ModGameModalComponent,
+    GroupFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -54,7 +71,14 @@ import { ResumeDataComponent } from './inscription/resume-data/resume-data.compo
     CommonModule,
     HttpClientModule,
     BaseModule,
-    FormsModule
+    FormsModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      positionClass:'toast-top-left',
+      preventDuplicates: true,
+      timeOut: 5000
+    })
   ],
   providers: [
     {
@@ -65,7 +89,7 @@ import { ResumeDataComponent } from './inscription/resume-data/resume-data.compo
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              '450842705465-9gf1q4fafo27b77r6odp78rk0h1v5rsp.apps.googleusercontent.com'
+              CommonConstants.GOOGLE_LOG_API
             )
           }
         ],
@@ -73,7 +97,9 @@ import { ResumeDataComponent } from './inscription/resume-data/resume-data.compo
           console.error(err);
         }
       } as SocialAuthServiceConfig,
-    }
+    },
+    Location,
+    [AdminGuard]
   ],
   bootstrap: [
     AppComponent,

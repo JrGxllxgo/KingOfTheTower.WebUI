@@ -2,13 +2,14 @@ import { NgModule } from '@angular/core';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
-import { NewsComponent } from './news/news.component';
 import { MediaComponent } from './media/media.component';
 import { InformationComponent } from './information/information.component';
-import { ContactComponent } from './contact/contact.component';
-import { RulesComponent } from './rules/rules.component';
 import { ProfileConfigComponent } from './profile-config/profile-config.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { AdminDashboardComponent } from './dashboards/admin-dashboard/admin-dashboard.component';
+import { CompetitionComponent } from './competition/competition.component';
+import { StaffDashboardsComponent } from './dashboards/staff-dashboards/staff-dashboards.component';
+import { AdminGuard } from './admin-guard';
 
 const routes: Routes = [
   {
@@ -21,10 +22,6 @@ const routes: Routes = [
     component: WelcomeComponent
   },
   {
-    path: 'news',
-    component: NewsComponent
-  },
-  {
     path: 'media',
     component: MediaComponent
   },
@@ -33,20 +30,26 @@ const routes: Routes = [
     component: InformationComponent
   },
   {
-    path: 'contact',
-    component: ContactComponent
-  },
-  {
-    path: 'rules',
-    component: RulesComponent
-  },
-  {
     path: 'configprofile',
     component: ProfileConfigComponent
   },
   {
     path: 'inscription',
     component: InscriptionComponent
+  },
+  {
+    path: 'dashboard',
+    // canActivate: [AdminGuard],
+    component: AdminDashboardComponent
+  },
+  {
+    path: 'staff',
+    // canActivate: [AdminGuard],
+    component: StaffDashboardsComponent
+  },
+  {
+    path: 'competition',
+    component: CompetitionComponent
   },
   {
     path:'**',
